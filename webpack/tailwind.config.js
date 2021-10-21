@@ -37,11 +37,6 @@ module.exports = {
         dark: "#00008B", // text-blue-dark
         100: "#ff0000", // text-blue-100
       },
-      pink: {
-        light: "#ff7ce5",
-        DEFAULT: "#ff49db",
-        dark: "#ff16d1",
-      },
       gray: {
         darkest: "#1f2d3d",
         dark: "#3c4858",
@@ -50,10 +45,12 @@ module.exports = {
         lightest: "#f9fafc",
       },
       white: {
-        DEFAULT: "#ffffff",
+        DEFAULT: "#f9f9f9",
+        true: "#ffffff",
       },
       black: {
-        DEFAULT: "#000000",
+        DEFAULT: "#333333",
+        true: "#000000",
       },
     },
   },
