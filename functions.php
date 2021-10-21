@@ -83,6 +83,9 @@ function register_col_2() {
 add_action( 'init', 'register_col_2' );
 
 
+//*****************************************************
+//******************* P O S T S ***********************
+//*****************************************************
 
 function tn_custom_excerpt_length( $length ) {
 	return 20;
@@ -95,6 +98,15 @@ add_filter( 'excerpt_length', 'tn_custom_excerpt_length', 999 );
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 add_theme_support( 'post-thumbnails' );
+
+//*****************************************************
+//******************* F O N T S ***********************
+//*****************************************************
+wp_register_style( 'raleway_font', 'https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;800' );
+wp_enqueue_style('raleway_font');
+
+wp_register_style( 'opensans_font', 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,500;0,600;0,700;0,800;1,500' );
+wp_enqueue_style('opensans_font');
 
 
 //*****************************************************
