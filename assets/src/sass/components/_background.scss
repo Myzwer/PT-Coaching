@@ -45,10 +45,15 @@
 .viewport-header {
   align-items: center;
   display: flex;
-  height: 80vh;
+  height: 70vh;
   justify-content: center;
   position: relative;
   text-align: center;
+}
+
+.video-overlay {
+  height: 50vh;
+  padding-top: 24vh;
 }
 
 //This can be used anywhere, but it HAS to have relative positioning above it or it won't work.
