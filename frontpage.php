@@ -25,11 +25,12 @@ get_header(); ?>
     </div>
 
     <div class="bg-white pb-5 md:pb-0.5">
-        <div class="m-4 md:m-10 lg:max-w-6xl lg:text-center lg:mx-auto pt-10">
+        <div class="md:m-10 lg:max-w-6xl lg:text-center lg:mx-auto pt-10">
             <div class="grid grid-cols-12">
                 <div class="col-span-12">
                     <div class="text-left px-2 mb-1">
-                        <h2 class="text-2xl pb-3 md:pr-5 inline-block">Helping pastors create healthy environments that grow healthy
+                        <h2 class="text-2xl pb-3 md:pr-5 inline-block">Helping pastors create healthy environments that
+                            grow healthy
                             churches.</h2>
                         <button class="uppercase inline-block rounded-md py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
                             Take Your First Step
@@ -39,6 +40,26 @@ get_header(); ?>
             </div>
         </div>
     </div>
+
+    <div class="bg-gray">
+        <div class="md:w-2/3 mx-auto grid grid-cols-12 gap-4 p-4">
+            <div class="col-span-12 md:col-span-4">
+                <img src="https://pastor-trent-coaching.local/wp-content/uploads/2021/10/Pt-Coaching.png" alt="">
+            </div>
+
+            <div class="col-span-12 md:col-start-6 md:col-span-7 lg:pt-12">
+                <h3 class="text-2xl font-bold">Every church is unique and requires a tailored approach.</h3>
+                <p>With our detailed coaching process, our team aims to create a healthy environment that will lead to a
+                    culture of multiplying disciples for God's Kingdom. I love God's Church, and we desire to see
+                    disciples created for His glory. There is no secret to growth. However, we do know God will do his
+                    part. The question remains, 'Will you do yours?’</p>
+                <button class="uppercase inline-block rounded-md mt-3 py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
+                    Take Your First Step
+                </button>
+            </div>
+        </div>
+    </div>
+
 
 
 <?php
