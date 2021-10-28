@@ -41,7 +41,7 @@ get_header(); ?>
         </div>
     </div>
 
-    <div class="bg-gray">
+    <div class="bg-gray py-20">
         <div class="md:w-2/3 mx-auto grid grid-cols-12 gap-4 p-4">
             <div class="col-span-12 md:col-span-4">
                 <img src="https://pastor-trent-coaching.local/wp-content/uploads/2021/10/Pt-Coaching.png" alt="">
@@ -56,6 +56,36 @@ get_header(); ?>
                 <button class="uppercase inline-block rounded-md mt-3 py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
                     Take Your First Step
                 </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white">
+        <div class=" lg:text-center lg:mx-auto">
+            <div class="grid grid-cols-12">
+                <div class="col-span-12 md:col-span-4 text-center bg-gray-middle py-14 px-2">
+                    <h3 class = "text-xl">Watch a Sermon</h3>
+                    <p>Lorem ipsum dolor as eguer sit amet, consectetur adipisicing elit. Ab aspernatur commodi, consectetur,</p>
+                    <button class="rounded-md py-3 px-6 mt-4 text-black bg-gray hover:bg-white-true transition duration-300 drop-shadow-lg">
+                        Stream a Sermon <i class="fas fa-angle-right"></i>
+                    </button>
+                </div>
+
+                <div class="col-span-12 md:col-span-4 text-center bg-gray-light py-14 px-2">
+                    <h3 class = "text-xl">Watch Pastor Trent Live</h3>
+                    <p>Lorem ipsum dolor as eguer sit amet, consectetur adipisicing elit. Ab aspernatur commodi, consectetur,</p>
+                    <button class="rounded-md py-3 px-6 mt-4 text-black bg-gray hover:bg-white-true transition duration-300 drop-shadow-lg">
+                        Stream A Service <i class="fas fa-external-link-alt"></i>
+                    </button>
+                </div>
+
+                <div class="col-span-12 md:col-span-4 text-center bg-gray-lightest py-14 px-2">
+                    <h3 class = "text-xl">Watch On YouTube</h3>
+                    <p>Lorem ipsum dolor as eguer sit amet, consectetur adipisicing elit. Ab aspernatur commodi, consectetur,</p>
+                    <button class="rounded-md py-3 px-6 mt-4 text-black bg-gray hover:bg-white-true transition duration-300 drop-shadow-lg">
+                        Go To Youtube <i class="fas fa-external-link-alt"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
