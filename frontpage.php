@@ -2,7 +2,7 @@
 /**
  * Template Name: Front Page
  *
- * The Frontpage of the Wordpack Theme
+ * The Frontpage of the PT Coaching Theme
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -13,122 +13,83 @@
 
 get_header(); ?>
 
-    <video class="header-video" src="https://foothillscollective.com/wp-content/uploads/2021/04/Res-Power-Background.mp4" autoplay loop playsinline muted></video>
+    <video class="header-video"
+           src="https://pastor-trent-coaching.local/wp-content/uploads/2021/01/PT-Background-Jan-2021.mp4" autoplay loop
+           playsinline muted></video>
 
-    <div class="viewport-header">
-        <div class="head-container">
-            <div class="center add-padding">
-                <h1 class="text-white text-5xl pb-5">Header Title</h1>
-            </div>
-            <hr class="text-white pb-5">
-            <h2 class="text-white text-3xl ">Title</h2>
-            <h3 class="text-white text-2xl">Subtitle</h3>
-        </div>
+    <div class="video-overlay">
+        <h1 class="text-white m-auto text-center tracking-wider text-4xl md:text-6xl">Dr. Trent Stewart</h1>
+        <img class="m-auto text-center -mt-20 md:-mt-32 w-36 md:w-56"
+             src="https://pastor-trent-coaching.local/wp-content/uploads/2020/04/outline-logo.png"
+             alt="">
     </div>
 
-    <div class="bg-white pb-10">
-        <div class="m-4 md:m-10 lg:max-w-4xl lg:text-center lg:mx-auto pt-10">
-            <div class="grid">
-                <div class=" grid-cols-12">
-                    <div class="col-span-12">
-                        <div class="text-center md:text-left mb-1">
-                            <h1>Color Pod</h1>
-                            <p>All fields optional</p>
-                        </div>
-                        <hr>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-12 gap-4 mt-6">
-                <div class="col-span-12 lg:col-span-4 card-gradient-1 rounded-xl shadow-xl">
-                    <div class="text-center p-4">
-                        <h2 class = "font-bold text-2xl">Title</h2>
-                        <h4 class = "font-semibold">Subtitle</h4>
-                        <p class = "text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam commodi consequuntur distinctio doloribus eaque, earum exercitationem, fuga iste labore magni, maxime molestiae nulla pariatur quod sapiente totam vel voluptate?</p>
-                        <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                            Call To Action
-                        </button>
-                    </div>
-                </div>
-
-                <div class="col-span-12 md:col-span-6 lg:col-span-4 card-gradient-2 rounded-xl shadow-xl">
-                    <div class="text-center p-4">
-                        <h2 class = "font-bold text-2xl">Title</h2>
-                        <h4 class = "font-semibold">Subtitle</h4>
-                        <p class = "text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam commodi consequuntur distinctio doloribus eaque, earum exercitationem, fuga iste labore magni, maxime molestiae nulla pariatur quod sapiente totam vel voluptate?</p>
-                        <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                            Call To Action
-                        </button>
-                    </div>
-                </div>
-
-                <div class="col-span-12 md:col-span-6 lg:col-span-4 card-gradient-3 rounded-xl shadow-xl">
-                    <div class="text-center p-4">
-                        <h2 class = "font-bold text-2xl">Title</h2>
-                        <h4 class = "font-semibold">Subtitle</h4>
-                        <p class = "text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam commodi consequuntur distinctio doloribus eaque, earum exercitationem, fuga iste labore magni, maxime molestiae nulla pariatur quod sapiente totam vel voluptate?</p>
-                        <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                            Call To Action
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-12 mt-20">
+    <div class="bg-white pb-5 md:pb-0.5">
+        <div class="md:m-10 lg:max-w-6xl lg:text-center lg:mx-auto pt-10">
+            <div class="grid grid-cols-12">
                 <div class="col-span-12">
-                    <div class="text-center md:text-left mb-1">
-                        <h1>PDF Download (four-up)</h1>
-                        <p>This configuration always shows four PDF's on one row.</p>
-                    </div>
-                    <hr>
-                </div>
-            </div>
-
-
-            <div class="grid grid-cols-12 mt-5 gap-6">
-                <div class="col-span-12 md:col-span-6 lg:col-span-3">
-                    <div class="text-center mb-1">
-                        <div class="w-24 text-center m-auto my-3">
-                            <img class = "rounded-full" src="https://images.unsplash.com/photo-1508515053963-70c7cc39dfb5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80" alt="">
-                        </div>
-                        <h2 class = "font-bold text-2xl">PDF Title</h2>
-                        <p class = "text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam corporis cumque doloremque error esse exercitationem explicabo iure iusto magni molestiae, nulla odio quam quo repellat vero. Aliquam possimus repellendus voluptate.</p>
-                    </div>
-                </div>
-
-                <div class="col-span-12 md:col-span-6 lg:col-span-3">
-                    <div class="text-center mb-1">
-                        <div class="w-24 text-center m-auto my-3">
-                            <img class = "rounded-full" src="https://images.unsplash.com/photo-1508515053963-70c7cc39dfb5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80" alt="">
-                        </div>
-                        <h2 class = "font-bold text-2xl">PDF Title</h2>
-                        <p class = "text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam corporis cumque doloremque error esse exercitationem explicabo iure iusto magni molestiae, nulla odio quam quo repellat vero. Aliquam possimus repellendus voluptate.</p>
-                    </div>
-                </div>
-
-                <div class="col-span-12 md:col-span-6 lg:col-span-3">
-                    <div class="text-center mb-1">
-                        <div class="w-24 text-center m-auto my-3">
-                            <img class = "rounded-full" src="https://images.unsplash.com/photo-1508515053963-70c7cc39dfb5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80" alt="">
-                        </div>
-                        <h2 class = "font-bold text-2xl">PDF Title</h2>
-                        <p class = "text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam corporis cumque doloremque error esse exercitationem explicabo iure iusto magni molestiae, nulla odio quam quo repellat vero. Aliquam possimus repellendus voluptate.</p>
-                    </div>
-                </div>
-
-                <div class="col-span-12 md:col-span-6 lg:col-span-3">
-                    <div class="text-center mb-1">
-                        <div class="w-24 text-center m-auto my-3">
-                            <img class = "rounded-full" src="https://images.unsplash.com/photo-1508515053963-70c7cc39dfb5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80" alt="">
-                        </div>
-                        <h2 class = "font-bold text-2xl">PDF Title</h2>
-                        <p class = "text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam corporis cumque doloremque error esse exercitationem explicabo iure iusto magni molestiae, nulla odio quam quo repellat vero. Aliquam possimus repellendus voluptate.</p>
+                    <div class="text-left px-2 mb-1">
+                        <h2 class="text-2xl pb-3 md:pr-5 inline-block">Helping pastors create healthy environments that
+                            grow healthy
+                            churches.</h2>
+                        <button class="uppercase inline-block rounded-md py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
+                            Take Your First Step
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="bg-gray py-20">
+        <div class="md:w-2/3 mx-auto grid grid-cols-12 gap-4 p-4">
+            <div class="col-span-12 md:col-span-4">
+                <img src="https://pastor-trent-coaching.local/wp-content/uploads/2021/10/Pt-Coaching.png" alt="">
+            </div>
+
+            <div class="col-span-12 md:col-start-6 md:col-span-7 lg:pt-12">
+                <h3 class="text-2xl font-bold">Every church is unique and requires a tailored approach.</h3>
+                <p>With our detailed coaching process, our team aims to create a healthy environment that will lead to a
+                    culture of multiplying disciples for God's Kingdom. I love God's Church, and we desire to see
+                    disciples created for His glory. There is no secret to growth. However, we do know God will do his
+                    part. The question remains, 'Will you do yours?’</p>
+                <button class="uppercase inline-block rounded-md mt-3 py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
+                    Take Your First Step
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white">
+        <div class=" lg:text-center lg:mx-auto">
+            <div class="grid grid-cols-12">
+                <div class="col-span-12 md:col-span-4 text-center bg-gray-middle py-14 px-2">
+                    <h3 class = "text-xl">Watch a Sermon</h3>
+                    <p>Lorem ipsum dolor as eguer sit amet, consectetur adipisicing elit. Ab aspernatur commodi, consectetur,</p>
+                    <button class="rounded-md py-3 px-6 mt-4 text-black bg-gray hover:bg-white-true transition duration-300 drop-shadow-lg">
+                        Stream a Sermon <i class="fas fa-angle-right"></i>
+                    </button>
+                </div>
+
+                <div class="col-span-12 md:col-span-4 text-center bg-gray-light py-14 px-2">
+                    <h3 class = "text-xl">Watch Pastor Trent Live</h3>
+                    <p>Lorem ipsum dolor as eguer sit amet, consectetur adipisicing elit. Ab aspernatur commodi, consectetur,</p>
+                    <button class="rounded-md py-3 px-6 mt-4 text-black bg-gray hover:bg-white-true transition duration-300 drop-shadow-lg">
+                        Stream A Service <i class="fas fa-external-link-alt"></i>
+                    </button>
+                </div>
+
+                <div class="col-span-12 md:col-span-4 text-center bg-gray-lightest py-14 px-2">
+                    <h3 class = "text-xl">Watch On YouTube</h3>
+                    <p>Lorem ipsum dolor as eguer sit amet, consectetur adipisicing elit. Ab aspernatur commodi, consectetur,</p>
+                    <button class="rounded-md py-3 px-6 mt-4 text-black bg-gray hover:bg-white-true transition duration-300 drop-shadow-lg">
+                        Go To Youtube <i class="fas fa-external-link-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
 <?php
