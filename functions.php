@@ -83,6 +83,9 @@ function register_col_2() {
 add_action( 'init', 'register_col_2' );
 
 
+//*****************************************************
+//******************* P O S T S ***********************
+//*****************************************************
 
 function tn_custom_excerpt_length( $length ) {
 	return 20;
@@ -95,6 +98,15 @@ add_filter( 'excerpt_length', 'tn_custom_excerpt_length', 999 );
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 add_theme_support( 'post-thumbnails' );
+
+//*****************************************************
+//******************* F O N T S ***********************
+//*****************************************************
+wp_register_style( 'raleway_font', 'https://fonts.googleapis.com/css2?family=Raleway:wght@500;700;800' );
+wp_enqueue_style('raleway_font');
+
+wp_register_style( 'opensans_font', 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,500;0,600;0,700;0,800;1,500' );
+wp_enqueue_style('opensans_font');
 
 
 //*****************************************************
@@ -169,3 +181,106 @@ function wpbeginner_numeric_posts_nav() {
 	echo '</ul></div>' . "\n";
 
 }
+
+//*****************************************************
+//**************** CUSTOM TAXONOMIES ******************
+//*****************************************************
+
+/**
+ * Register a custom post type called "Broadcast".
+ *
+ * @see get_post_type_labels() for label keys.
+ */
+function broadcast_init() {
+    $labels = array(
+        'name'                  => __( 'Broadcasts'),
+        'singular_name'         => __( 'Broadcast'),
+        'menu_name'             => __( 'Broadcasts'),
+        'name_admin_bar'        => __( 'Broadcast'),
+        'add_new'               => __( 'Add New'),
+        'add_new_item'          => __( 'Add New Broadcast'),
+        'new_item'              => __( 'New Broadcast'),
+        'edit_item'             => __( 'Edit Broadcast'),
+        'view_item'             => __( 'View Broadcast'),
+        'all_items'             => __( 'All Broadcasts'),
+        'search_items'          => __( 'Search Broadcasts'),
+        'parent_item_colon'     => __( 'Parent Broadcasts:'),
+        'not_found'             => __( 'No Broadcasts found.'),
+        'not_found_in_trash'    => __( 'No Broadcasts found in Trash.'),
+        'archives'              => __( 'Broadcast archives'),
+        'insert_into_item'      => __( 'Insert into Broadcast'),
+        'uploaded_to_this_item' => __( 'Uploaded to this Broadcast'),
+        'filter_items_list'     => __( 'Filter Broadcast list'),
+        'items_list_navigation' => __( 'Broadcast list navigation'),
+        'items_list'            => __( 'Broadcast list'),
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'broadcast' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'custom-fields'),
+        'menu_icon'          => 'dashicons-upload',
+        'taxonomies'         => array( 'watch_category' )
+    );
+
+    register_post_type( 'broadcast', $args );
+
+
+// This is the taxonomy
+    register_taxonomy('format', 'broadcast',
+        array(
+            'labels' => array(
+                'name' => __( 'Formats' ),
+                'singular_name' => __( 'Format' ),
+                'add_new_item' => __( 'Add New Format' ),
+                'edit_item' => __( 'Edit Format' ),
+                'new_item_name' => __( 'New Format Name' ),
+                'view' => __( 'View Format' ),
+                'view_item' => __( 'View Format' ),
+                'search_items' => __( 'Search Formats' ),
+                'not_found' => __( 'No Formats found' ),
+                'not_found_in_trash' => __( 'No Formats found in Trash' ),
+                'parent_item' => __( 'Parent Format' ),
+            ),
+            'hierarchical' => false,
+            'rewrite'      => array( 'slug' => 'format' )
+        )
+    );
+}
+
+add_action( 'init', 'broadcast_init' );
+
+
+
+
+// This is the taxonomy for the Sermon Videos / Other Video Categories.
+register_taxonomy('watch_category', 'broadcast',
+    array(
+        'labels' => array(
+            'name' => __( 'Watch Categories' ),
+            'singular_name' => __( 'Watch Category' ),
+            'add_new_item' => __( 'Add New Watch Category' ),
+            'edit_item' => __( 'Edit Watch Category' ),
+            'new_item_name' => __( 'New Watch Category' ),
+            'view' => __( 'View Watch Categories' ),
+            'view_item' => __( 'View Watch Categories' ),
+            'search_items' => __( 'Search Watch Categories' ),
+            'not_found' => __( 'No Watch Categories found' ),
+            'not_found_in_trash' => __( 'No Watch Categories found in Trash' ),
+            'parent_item' => __( 'Parent Watch Categories' ),
+        ),
+        'hierarchical' => true,
+        'rewrite'      => array( 'slug' => 'watch_categories' )
+    )
+);
+
+add_action( 'init', 'broadcast_init' );
