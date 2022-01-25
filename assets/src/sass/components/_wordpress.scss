@@ -29,3 +29,11 @@
     padding-top: 10px;
   }
 }
+
+/* About Us Page */
+// I don't know how many paragraphs will get generated so this code adds some padding to the bottom of the paragraphs
+.bio {
+  p {
+    padding-bottom: 10px;
+  }
+}
