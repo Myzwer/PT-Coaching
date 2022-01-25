@@ -85,3 +85,21 @@
     width: 100%;
   }
 }
+
+.content-left {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+}
+
+@media screen and (min-width: 40em) {
+  .content-left {
+    left: 30%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+  }
+}
