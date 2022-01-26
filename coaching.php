@@ -11,16 +11,76 @@
  */
 
 get_header(); ?>
-<div class="bg-no-repeat bg-scroll bg-cover relative" style="background: linear-gradient(
+    <div class="bg-no-repeat bg-scroll bg-cover relative" style="background: linear-gradient(
   rgba(0, 0, 0, 0.45),
   rgba(0, 0, 0, 0.45)
 ), url('https://images.unsplash.com/photo-1501612780327-45045538702b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80') center center;
  height: 40vh;">
-    <div class="content-middle text-white text-center">
-        <h1 class="text-4xl md:text-5xl mb-3">Contact</h1>
+        <div class="md:w-2/3 mx-auto grid grid-cols-12 gap-4 pt-96 text-white">
+            <div class="col-span-12 px-3">
+                <h1 class="text-4xl md:text-5xl mb-3">Certified Coaching</h1>
+            </div>
+        </div>
     </div>
-</div>
 
+
+    <div class="bg-gray bio pb-20">
+        <div class="md:w-3/4 mx-auto grid grid-cols-12 gap-4 p-2">
+
+            <div class="col-span-12 my-2 md:my-5 px-3 text-left md:text-center">
+                <h2 class = "text-3xl md:text-4xl mb-1 font-bold">Pastor Trent works for Courage to Lead - Pastor Division</h2>
+            </div>
+
+            <div class="col-span-12 md:my-5 px-3 text-center">
+                <hr>
+            </div>
+
+            <div class="col-span-12 my-2 md:col-span-6 mt-5 px-3">
+                <h3 class = "text-xl md:text-2xl mb-1 font-bold">HELPING CHURCHES CREATE HEALTHY ENVIRONMENTS THAT GROW HEALTHY MINISTRIES</h3>
+                <button class="uppercase inline-block rounded-md mt-3 py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
+                    Take Your First Step
+                </button>
+            </div>
+
+            <div class="col-span-12 md:col-span-6 mt-5 px-3">
+                <p>Every church is unique and requires a tailored approach. With our detailed coaching process, our aim is to help you create a healthy environment that will lead to a culture of multiplying disciples for God’s Kingdom. We have also partnered with the organization Courage to Lead to provide you an opportunity lead at the next level through leadership coaching. If you're ready to take your next step as a leader, contact us today.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-12">
+        <div class="bg-gray-lightest col-span-12 md:col-span-6 p-3 md:p-5 md:py-8">
+            <h4 class = "text-3xl font-bold">Step 1</h4>
+            <h5 class = "text-lg mb-1 italic">Contact</h5>
+            <p>The first step to bring about change in your church is to reach out. Contact us, we would love to help.</p>
+        </div>
+        <div class="bg-gray-light col-span-12 md:col-span-6 p-3 md:p-5 md:py-8">
+            <h4 class = "text-3xl font-bold">Step 1</h4>
+            <h5 class = "text-lg mb-1 italic">Contact</h5>
+            <p>We'll work together with you and a representative from courage to lead to determine your needs for leadership coaching.</p>
+        </div>
+        <div class="bg-gray-middle col-span-12 md:col-span-6 p-3 md:p-5 md:py-8">
+            <h4 class = "text-3xl font-bold">Step 1</h4>
+            <h5 class = "text-lg mb-1 italic">Contact</h5>
+            <p>We’ll create a coaching plan based on your specific needs.</p>
+        </div>
+        <div class="bg-gray col-span-12 md:col-span-6 p-3 md:p-5 md:py-8">
+            <h4 class = "text-3xl font-bold">Step 1</h4>
+            <h5 class = "text-lg mb-1 italic">Contact</h5>
+            <p>It’s time to start meeting and set the plan into motion.</p>
+        </div>
+    </div>
+
+    <div class="bg-gray-light bio py-10">
+        <div class="md:w-3/4 mx-auto grid grid-cols-12 gap-4 p-2">
+
+            <div class="col-span-12 text-center">
+                <button class="uppercase inline-block rounded-md mt-3 py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
+                    Take Your First Step
+                </button>
+            </div>
+        </div>
+    </div>
 
 
 
