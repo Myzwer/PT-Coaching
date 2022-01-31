@@ -29,7 +29,7 @@ get_header(); ?>
 
     <div class="bg-gray bio">
         <div class="md:w-3/4 mx-auto grid grid-cols-12 gap-4 p-5">
-            <div class="col-span-12 md:col-span-6 lg:col-span-8 mt-5 px-3 videoWrapper">
+            <div class="col-span-12 md:col-span-6 lg:col-span-8 mt-5 px-3 video-wrapper">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/G44xTr8D_bw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="col-span-12">
