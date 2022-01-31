@@ -51,7 +51,7 @@ get_header(); ?>
                 </div>
 
                 <div class="col-span-12 md:col-span-6 lg:col-span-12">
-                    <div class="bg-gray-lightest shadow-lg rounded-lg p-5">
+                    <div class="bg-gray-lightest shadow-lg rounded-lg p-5 icons">
                         <h3 class = "text-2xl md:text-3xl mb-1 font-bold">Stay Connected</h3>
                         <a href="https://www.facebook.com/trentonjstewart"><i class="fa fa-facebook" aria-label="Trent Stewart Facebook"></i></a>
                         <a href="https://www.instagram.com/trentonjstewart/?hl=en"><i class="fa fa-instagram" aria-label="Trent Stewart Instagram"></i></a>
