@@ -1,0 +1,54 @@
+/**
+ * Forms
+ * =================================
+ * - Contact Form
+ *
+ *
+ *
+ *
+ */
+
+// Not my class names, sooo....
+/* stylelint-disable selector-max-id, selector-max-compound-selectors, selector-class-pattern */
+
+.gform_title,
+.gform_description {
+  display: none;
+}
+
+.gform_body input {
+  background-color: #e0e6ed;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.15);
+  color: #000000;
+}
+
+.gform_body input:focus {
+  border: 1px solid #1d5134;
+  outline: none !important;
+}
+
+.gfield_required {
+  color: #ff1000;
+}
+
+.gform_body input::placeholder {
+  color: #3c4858;
+  opacity: 0.5;
+}
+
+.gform_body textarea {
+  background-color: #e0e6ed;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.15);
+  color: #000000;
+}
+
+.gform_footer .gform_button {
+  background-color: #3c4858;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  color: #f9fafc;
+  padding: 5px 30px;
+}
+/* stylelint-enable selector-max-id, selector-max-compound-selectors, selector-class-pattern */

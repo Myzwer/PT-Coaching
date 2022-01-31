@@ -22,7 +22,7 @@ get_header(); ?>
 <div class="bg-gray-light pb-10">
     <div class="mx-4 md:mx-10 lg:max-w-4xl lg:text-center lg:mx-auto pt-10">
         <div class="grid grid-cols-12 gap-4">
-            <div class="col-span-12 bg-gray-lightest rounded-xl shadow-xl mb-10">
+            <div class="col-span-12 bg-gray-lightest rounded-lg shadow-xl mb-10">
                 <div class="text-center p-5 md:p-10 text-black">
                     <h2 class="text-3xl text-left">Want to Contact Me?</h2>
                     <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa cum distinctio dolorem doloribus earum esse eum expedita, explicabo, harum magnam nulla optio porro quibusdam quidem sapiente sint tenetur veritatis voluptatibus?</p>
@@ -46,8 +46,8 @@ get_header(); ?>
             <div class="col-span-12 md:col-span-4">
                 <div class="grid grid-cols-12 gap-4">
                     <div class="col-span-12">
-                        <div class="bg-gray-lightest rounded-lg shadow-xl">
-                            <div class="text-left p-10 text-black">
+                        <div class="bg-gray-lightest rounded-lg shadow-lg">
+                            <div class="bg-gray-lightest shadow-lg rounded-lg px-5 py-10 icons">
                                 <h3 class = "text-2xl md:text-3xl mb-1 font-bold">Stay Connected</h3>
                                 <a href="https://www.facebook.com/trentonjstewart"><i class="fa fa-facebook" aria-label="Trent Stewart Facebook"></i></a>
                                 <a href="https://www.instagram.com/trentonjstewart/?hl=en"><i class="fa fa-instagram" aria-label="Trent Stewart Instagram"></i></a>
