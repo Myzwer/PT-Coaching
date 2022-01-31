@@ -28,19 +28,15 @@ get_header(); ?>
     </div>
 
     <div class="bg-gray bio">
-        <div class="md:w-3/4 mx-auto grid grid-cols-12 gap-4 p-2">
-            <div class="col-span-12 my-2 md:col-span-10 mt-5 px-3">
+        <div class="md:w-3/4 mx-auto grid grid-cols-12 gap-4 p-5">
+            <div class="col-span-12 md:col-span-6 lg:col-span-8 mt-5 px-3 videoWrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/G44xTr8D_bw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-span-12">
                 <h3 class = "text-xl md:text-2xl mb-1 font-bold">HELPING CHURCHES CREATE HEALTHY ENVIRONMENTS THAT GROW HEALTHY MINISTRIES</h3>
                 <p>Every church is unique and requires a tailored approach. With our detailed coaching process, our aim is to help you create a healthy environment that will lead to a culture of multiplying disciples for God’s Kingdom. We have also partnered with the organization Courage to Lead to provide you an opportunity lead at the next level through leadership coaching. If you're ready to take your next step as a leader, contact us today.</p>
             </div>
-
         </div>
     </div>
-
-
-
-
-
-
 
 <?php get_footer();
