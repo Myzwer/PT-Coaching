@@ -51,11 +51,23 @@ get_header(); ?>
                 </div>
 
                 <div class="col-span-12 md:col-span-6 lg:col-span-12">
-                    <div class="bg-gray-lightest shadow-lg rounded-lg p-5 icons">
+                    <div class="bg-gray-lightest shadow-lg rounded-lg p-5">
                         <h3 class = "text-2xl md:text-3xl mb-1 font-bold">Stay Connected</h3>
-                        <a href="https://www.facebook.com/trentonjstewart"><i class="fa fa-facebook" aria-label="Trent Stewart Facebook"></i></a>
-                        <a href="https://www.instagram.com/trentonjstewart/?hl=en"><i class="fa fa-instagram" aria-label="Trent Stewart Instagram"></i></a>
-                        <a href="https://www.youtube.com/channel/UC2_Vo0eFmYaMq3SiA0PQLaQ"><i class="fa fa-youtube" aria-label="Trent Stewart Youtube"></i></a>
+                        <a href="https://www.facebook.com/trentonjstewart">
+                            <button class="uppercase inline-block rounded-md mt-3 py-1 px-3 gray-dark border-2 border-gray-dark transition duration-300">
+                                Facebook <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </a>
+                        <a href="https://www.instagram.com/trentonjstewart/?hl=en">
+                            <button class="uppercase inline-block rounded-md mt-3 py-1 px-3 gray-dark border-2 border-gray-dark transition duration-300">
+                                Instagram <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UC2_Vo0eFmYaMq3SiA0PQLaQ">
+                            <button class="uppercase inline-block rounded-md mt-3 py-1 px-3 gray-dark border-2 border-gray-dark transition duration-300">
+                                Youtube <i class="fas fa-external-link-alt"></i>
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
