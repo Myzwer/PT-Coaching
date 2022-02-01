@@ -18,7 +18,7 @@ get_header(); ?>
           rgba(0, 0, 0, 0.45)
         ), url('https://images.unsplash.com/photo-1501612780327-45045538702b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80') center center;
          height: 40vh;">
-        <div class="absolute bottom-10 left-10 text-white">
+        <div class="absolute bottom-10 left-5 md:left-10 text-white">
         <h1 class="text-4xl md:text-5xl mb-3">About Me</h1>
         <p class="text-xl md:text-2xl mb-3">My desire is to coach pastors to lead churches that connect more people to the Gospel.</p>
         </div>
