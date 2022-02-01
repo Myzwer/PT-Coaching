@@ -11,13 +11,20 @@
  */
 
 get_header(); ?>
-    <div class="bg-no-repeat bg-scroll bg-cover relative" style="background: linear-gradient(
-          rgba(0, 0, 0, 0.45),
-          rgba(0, 0, 0, 0.45)
-        ), url('https://images.unsplash.com/photo-1501612780327-45045538702b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80') center center;
-         height: 40vh;">
-        <h1 class="text-4xl md:text-5xl mb-3 absolute bottom-10 left-5 md:left-10 text-white ">Contact</h1>
-    </div>
+<?php if( have_rows('photo_background_section') ): ?>
+    <?php while( have_rows('photo_background_section') ): the_row();?>
+        <div class="bg-no-repeat bg-scroll bg-cover relative" style="background: linear-gradient(
+                rgba(0, 0, 0, 0.<?php the_sub_field('tint_level'); ?>),
+                rgba(0, 0, 0, 0.<?php the_sub_field('tint_level'); ?>)
+                ), url('<?php the_sub_field('background_image_url'); ?>') <?php the_sub_field('bg-pos-x'); ?> <?php the_sub_field('bg-pos-y'); ?>;
+                height: <?php the_sub_field('background_height'); ?>vh;">
+            <div class="absolute bottom-10 left-5 md:left-10 text-white">
+                <h1 class="text-4xl md:text-5xl mb-3"><?php the_sub_field('page_title'); ?></h1>
+                <p class="text-xl md:text-2xl mb-3"><?php the_sub_field('page_description'); ?></p>
+            </div>
+        </div>
+    <?php endwhile; ?>
+<?php endif; ?>
 
 <div class="bg-gray-light pb-10">
     <div class="mx-4 md:mx-10 lg:max-w-4xl lg:text-center lg:mx-auto pt-10">
