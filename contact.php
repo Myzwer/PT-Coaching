@@ -31,8 +31,8 @@ get_header(); ?>
         <div class="grid grid-cols-12 gap-4">
             <div class="col-span-12 bg-gray-lightest rounded-lg shadow-xl mb-10">
                 <div class="text-center p-5 md:p-10 text-black">
-                    <h2 class="text-3xl text-left">Want to Contact Me?</h2>
-                    <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa cum distinctio dolorem doloribus earum esse eum expedita, explicabo, harum magnam nulla optio porro quibusdam quidem sapiente sint tenetur veritatis voluptatibus?</p>
+                    <h2 class="text-3xl text-left"><?php the_field('contact_me_title'); ?></h2>
+                    <p class="text-left"><?php the_field('contact_main_text'); ?></p>
                 </div>
             </div>
 
@@ -54,22 +54,18 @@ get_header(); ?>
                 <div class="grid grid-cols-12 gap-4">
                     <div class="col-span-12">
                         <div class="bg-gray-lightest shadow-lg rounded-lg p-5 text-left">
-                            <h3 class = "text-2xl md:text-3xl mb-1 font-bold">Stay Connected</h3>
-                            <a href="https://www.facebook.com/trentonjstewart">
-                                <button class="uppercase inline-block rounded-md mt-3 py-1 px-3 gray-dark border-2 border-gray-dark transition duration-300">
-                                    Facebook <i class="fas fa-external-link-alt"></i>
-                                </button>
-                            </a>
-                            <a href="https://www.instagram.com/trentonjstewart/?hl=en">
-                                <button class="uppercase inline-block rounded-md mt-3 py-1 px-3 gray-dark border-2 border-gray-dark transition duration-300">
-                                    Instagram <i class="fas fa-external-link-alt"></i>
-                                </button>
-                            </a>
-                            <a href="https://www.youtube.com/channel/UC2_Vo0eFmYaMq3SiA0PQLaQ">
-                                <button class="uppercase inline-block rounded-md mt-3 py-1 px-3 gray-dark border-2 border-gray-dark transition duration-300">
-                                    Youtube <i class="fas fa-external-link-alt"></i>
-                                </button>
-                            </a>
+                            <h3 class = "text-2xl md:text-3xl mb-1 font-bold"><?php the_field('social_title'); ?></h3>
+                            <?php if( have_rows('social_links') ):
+                                // Loop through rows.
+                                while( have_rows('social_links') ) : the_row();?>
+                                    <a href="<?php the_sub_field('button_link') ?>">
+                                        <button class="uppercase inline-block rounded-md mt-3 py-1 px-3 gray-dark border-2 border-gray-dark transition duration-300">
+                                            <?php the_sub_field('button_text') ?>
+                                        </button>
+                                    </a>
+
+                                <?php endwhile; ?>
+                            <?php endif; ?>
                         </div>
                     </div>
 
