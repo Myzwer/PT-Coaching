@@ -41,7 +41,7 @@
         <div class="brand">
             <a href="/frontpage">
                 <!--Company Logo / Branding. Template supports both Text and Logo-->
-                <img src="https://pastor-trent-coaching.local/wp-content/uploads/2020/04/icon-dark.png"
+                <img src="<?php the_field('footer_image_wp', 'options'); ?>"
                      alt="Company Logo">
             </a>
         </div>
