@@ -86,7 +86,8 @@ get_header(); ?>
                         <h3 class="text-xl md:text-2xl font-bold"><?php echo get_the_title();?></h3>
                         <p class = "font-bold pb-3"><?php echo get_the_date();?></p>
                         <p><?php echo the_excerpt();?></p>
-                        <a href="<?php the_permalink(); ?>">
+<!--                        <a href="--><?php //the_permalink(); ?><!--">-->
+                        <a href="#">
                             <button class="uppercase inline-block rounded-md mt-3 py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
                                 Watch Now
                             </button>
