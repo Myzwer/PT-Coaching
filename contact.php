@@ -58,7 +58,7 @@ get_header(); ?>
                             <?php if( have_rows('social_links') ):
                                 // Loop through rows.
                                 while( have_rows('social_links') ) : the_row();?>
-                                    <a href="<?php the_sub_field('button_link') ?>">
+                                    <a href="<?php the_sub_field('button_link') ?>" target="_blank">
                                         <button class="uppercase inline-block rounded-md mt-3 py-1 px-3 gray-dark border-2 border-gray-dark transition duration-300">
                                             <?php the_sub_field('button_text') ?>
                                         </button>
