@@ -11,8 +11,9 @@
  */
 
 get_header(); ?>
-<?php if( have_rows('photo_background_section') ): ?>
-    <?php while( have_rows('photo_background_section') ): the_row();?>
+
+<?php if (have_rows('photo_background_section')): ?>
+    <?php while (have_rows('photo_background_section')): the_row(); ?>
         <div class="bg-no-repeat bg-scroll bg-cover relative" style="background: linear-gradient(
                 rgba(0, 0, 0, 0.<?php the_sub_field('tint_level'); ?>),
                 rgba(0, 0, 0, 0.<?php the_sub_field('tint_level'); ?>)
@@ -27,49 +28,74 @@ get_header(); ?>
 <?php endif; ?>
 
 
-    <div class="bg-gray bio pb-5">
-        <div class="md:w-3/4 mx-auto grid grid-cols-12 gap-4 p-2">
+<?php if (have_rows('podcast_1')): ?>
+    <?php while (have_rows('podcast_1')): the_row(); ?>
+        <div class="bg-gray bio pb-5">
+            <div class="md:w-3/4 mx-auto grid grid-cols-12 gap-4 p-2">
 
-            <div class="col-span-12 md:col-span-4 text-center mx-auto my-2 md:my-5 px-3">
-                <img src="https://pastor-trent-coaching.local/wp-content/uploads/2020/04/icon-dark.png" alt="">
-            </div>
+                <div class="col-span-12 md:col-span-4 text-center mx-auto my-2 md:my-5 px-3">
+                    <img src="<?php the_sub_field('podcast_logo'); ?>" alt="">
+                </div>
 
-            <div class="col-span-12 my-2 md:col-span-8 mt-5 px-3">
-                <h3 class = "text-xl md:text-2xl mb-1 font-bold">Busy Pastor Podcast</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur autem eius eum ipsam qui quod veritatis vitae. Amet, assumenda distinctio dolore iusto molestias nihil optio quia similique unde voluptates?</p>
-                <button class="uppercase inline-block rounded-md mt-3 py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
-                    Spotify
-                </button>
+                <div class="col-span-12 my-2 md:col-span-8 mt-5 px-3">
+                    <h3 class="text-xl md:text-2xl mb-1 font-bold"><?php the_sub_field('podcast_title'); ?></h3>
 
-                <button class="uppercase inline-block rounded-md mt-3 py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
-                    Apple Music
-                </button>
-            </div>
-        </div>
-    </div>
+                    <p><?php the_sub_field('podcast_description'); ?></p>
 
-    <div class="bg-gray-light bio pb-5">
-        <div class="md:w-3/4 mx-auto grid grid-cols-12 gap-4 p-2">
+                    <?php if (get_sub_field('spotify_link')): ?>
+                        <a href="<?php the_sub_field('spotify_link'); ?>">
+                            <button class="uppercase inline-block rounded-md mt-3 py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
+                                <?php the_sub_field('spotify_button_text'); ?>
+                            </button>
+                        </a>
+                    <?php endif; ?>
 
-            <div class="col-span-12 md:col-span-4 text-center mx-auto my-2 md:my-5 px-3">
-                <img src="https://pastor-trent-coaching.local/wp-content/uploads/2020/04/icon-dark.png" alt="">
-            </div>
-
-            <div class="col-span-12 my-2 md:col-span-8 mt-5 px-3">
-                <h3 class = "text-xl md:text-2xl mb-1 font-bold">Busy Pastor Podcast</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur autem eius eum ipsam qui quod veritatis vitae. Amet, assumenda distinctio dolore iusto molestias nihil optio quia similique unde voluptates?</p>
-                <button class="uppercase inline-block rounded-md mt-3 py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
-                    Spotify
-                </button>
-
-                <button class="uppercase inline-block rounded-md mt-3 py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
-                    Apple Music
-                </button>
+                    <?php if (get_sub_field('apple_music_link')): ?>
+                        <a href="<?php the_sub_field('apple_music_link'); ?>">
+                        <button class="uppercase inline-block rounded-md mt-3 py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
+                            <?php the_sub_field('apple_music_button_text'); ?>
+                        </button>
+                    </a>
+                    <?php endif; ?>
+                </div>
             </div>
         </div>
-    </div>
+    <?php endwhile; ?>
+<?php endif; ?>
 
+<?php if (have_rows('podcast_2')): ?>
+    <?php while (have_rows('podcast_2')): the_row(); ?>
+        <div class="bg-gray-light bio pb-5">
+            <div class="md:w-3/4 mx-auto grid grid-cols-12 gap-4 p-2">
 
+                <div class="col-span-12 md:col-span-4 text-center mx-auto my-2 md:my-5 px-3">
+                    <img src="<?php the_sub_field('podcast_logo'); ?>" alt="">
+                </div>
+
+                <div class="col-span-12 my-2 md:col-span-8 mt-5 px-3">
+                    <h3 class="text-xl md:text-2xl mb-1 font-bold"><?php the_sub_field('podcast_title'); ?></h3>
+                    <p><?php the_sub_field('podcast_description'); ?></p>
+
+                    <?php if (get_sub_field('spotify_link')): ?>
+                        <a href="<?php the_sub_field('spotify_link'); ?>">
+                            <button class="uppercase inline-block rounded-md mt-3 py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
+                                <?php the_sub_field('spotify_button_text'); ?>
+                            </button>
+                        </a>
+                    <?php endif; ?>
+
+                    <?php if (get_sub_field('apple_music_link')): ?>
+                        <a href="<?php the_sub_field('apple_music_link'); ?>">
+                            <button class="uppercase inline-block rounded-md mt-3 py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
+                                <?php the_sub_field('apple_music_button_text'); ?>
+                            </button>
+                        </a>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
+    <?php endwhile; ?>
+<?php endif; ?>
 
 
 <?php get_footer();
