@@ -55,29 +55,77 @@ get_header(); ?>
                 <h3 class="text2xl md:text-3xl mb-3 font-bold"><?php the_field('body_title_2'); ?></h3>
             </div>
 
-            <div class="col-span-12 p-5 mb-8 bg-gray-light shadow-lg rounded-lg">
-                <h3 class="text-xl md:text-2xl mb-1 font-bold">Busy Pastor Podcast</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur autem eius eum ipsam
-                    qui quod veritatis vitae. Amet, assumenda distinctio dolore iusto molestias nihil optio quia
-                    similique unde voluptates?</p>
-                <button class="uppercase inline-block rounded-md mt-3 py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
-                    Watch Now
-                </button>
-            </div>
 
-            <div class="col-span-12 p-5 mb-8 bg-gray-light shadow-lg rounded-lg">
-                <h3 class="text-xl md:text-2xl mb-1 font-bold">Busy Pastor Podcast</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur autem eius eum ipsam
-                    qui quod veritatis vitae. Amet, assumenda distinctio dolore iusto molestias nihil optio quia
-                    similique unde voluptates?</p>
-                <button class="uppercase inline-block rounded-md mt-3 py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
-                    Watch Now
-                </button>
-            </div>
+            <?php
+            // WP_Query arguments
+            $args = array(
+                'post_type' => array('broadcast'),
+                'post_status' => array('publish'),
+                'nopaging' => false,
+                'order' => 'DESC',
+                'orderby' => 'date',
+                'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1,
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => 'format',
+                        'terms' => 'videos',
+                        'field' => 'slug'
+                    )
+                )
+            );
 
-            <!-- End Featured Sermon -->
+            // The Query
+            $broadcasts = new WP_Query($args);
+
+            // The Loop
+            if ($broadcasts->have_posts()) {
+                while ($broadcasts->have_posts()) {
+                    $broadcasts->the_post();
+
+                    ?>
+
+                    <div class="col-span-12 p-5 mb-8 bg-gray-light shadow-lg rounded-lg">
+                        <h3 class="text-xl md:text-2xl mb-1 font-bold"><?php echo get_the_title();?></h3>
+                        <p class = "font-bold"><?php echo get_the_date();?></p>
+                        <p><?php echo the_excerpt();?></p>
+                        <a href="<?php the_permalink(); ?>">
+                            <button class="uppercase inline-block rounded-md mt-3 py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
+                                Watch Now
+                            </button>
+                        </a>
+                    </div>
+                <?php } ?>
+
+
+                <!-- Start Pagination-->
+                <div class="col-span-12 p-5 mb-8 pagination text-center">
+                    <?php
+                    echo paginate_links(array(
+                        'base' => str_replace(999999999, '%#%', esc_url(get_pagenum_link(999999999))),
+                        'total' => $broadcasts->max_num_pages,
+                        'current' => max(1, get_query_var('paged')),
+                        'format' => '?paged=%#%',
+                        'show_all' => false,
+                        'type' => 'list',
+                        'end_size' => 2,
+                        'mid_size' => 1,
+                        'prev_next' => true,
+                        'prev_text' => sprintf('<i></i> %1$s', __('Newer Videos', 'text-domain')),
+                        'next_text' => sprintf('%1$s <i></i>', __('Older Videos', 'text-domain')),
+                        'add_args' => false,
+                        'add_fragment' => '',
+                    ));
+                    ?>
+                </div>
+
+                <?php
+            } else {
+                echo 'there are no posts.'; // no posts found
+            }
+            // Restore original Post Data
+            wp_reset_postdata();
+            ?>
+            <!-- End Pagination -->
         </div>
     </div>
-
-
 <?php get_footer();
