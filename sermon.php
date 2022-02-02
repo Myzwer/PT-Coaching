@@ -32,7 +32,7 @@ get_header(); ?>
 
             <!-- Featured Sermon -->
             <div class="col-span-12 text-center mx-auto mt-10">
-                <h3 class="text2xl md:text-3xl mb-3 font-bold">Latest Sermon</h3>
+                <h3 class="text2xl md:text-3xl mb-3 font-bold"><?php the_field('body_title_1'); ?></h3>
             </div>
 
             <div class="col-span-12 lg:col-span-6 text-center mx-auto bg-gray-light lg:rounded-l-lg">
@@ -52,7 +52,7 @@ get_header(); ?>
 
             <!-- All Sermons -->
             <div class="col-span-12 text-center mx-auto mt-10">
-                <h3 class="text2xl md:text-3xl mb-3 font-bold">All Sermons</h3>
+                <h3 class="text2xl md:text-3xl mb-3 font-bold"><?php the_field('body_title_2'); ?></h3>
             </div>
 
             <div class="col-span-12 p-5 mb-8 bg-gray-light shadow-lg rounded-lg">
