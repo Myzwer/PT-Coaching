@@ -27,7 +27,7 @@ get_header(); ?>
 <?php endif; ?>
 
 
-    <div class="bg-gray bio pb-5">
+    <div class="bg-gray pb-5">
         <div class="md:w-3/4 mx-auto grid grid-cols-12 p-2">
 
             <!-- Featured Sermon -->
@@ -37,13 +37,11 @@ get_header(); ?>
 
             <div class="col-span-12 lg:col-span-6 text-center mx-auto bg-gray-light lg:rounded-l-lg">
                 <img class="shadow-lg rounded-t-lg md:rounded-t-none md:rounded-l-lg"
-                     src="https://pastor-trent-coaching.local/wp-content/uploads/2021/10/10-17-21-Sermon.jpg" alt="">
+                     src="https://trentstewart.org/wp-content/uploads/2022/01/01-30-22-Sermon.jpg" alt="">
             </div>
             <div class="col-span-12 lg:col-span-6 p-5 bg-gray-light shadow-lg rounded-b-lg md:rounded-b-none md:rounded-r-lg">
-                <h3 class="text-xl md:text-2xl mb-1 font-bold">Why Share? | Gospel Voice</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur autem eius eum ipsam
-                    qui quod veritatis vitae. Amet, assumenda distinctio dolore iusto molestias nihil optio quia
-                    similique unde voluptates?</p>
+                <h3 class="text-xl md:text-2xl mb-1 font-bold">How To Work | Mind Your Business</h3>
+                <p>Join us as we start our series "Mind Your Business" where Pastor Trent talks about what we should be working for.</p>
                 <button class="uppercase inline-block rounded-md mt-3 py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
                     Watch Now
                 </button>
@@ -85,8 +83,8 @@ get_header(); ?>
                     ?>
 
                     <div class="col-span-12 p-5 mb-8 bg-gray-light shadow-lg rounded-lg">
-                        <h3 class="text-xl md:text-2xl mb-1 font-bold"><?php echo get_the_title();?></h3>
-                        <p class = "font-bold"><?php echo get_the_date();?></p>
+                        <h3 class="text-xl md:text-2xl font-bold"><?php echo get_the_title();?></h3>
+                        <p class = "font-bold pb-3"><?php echo get_the_date();?></p>
                         <p><?php echo the_excerpt();?></p>
                         <a href="<?php the_permalink(); ?>">
                             <button class="uppercase inline-block rounded-md mt-3 py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
