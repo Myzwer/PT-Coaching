@@ -34,7 +34,7 @@ get_header(); ?>
             <div class="md:w-3/4 mx-auto grid grid-cols-12 gap-4 p-2">
 
                 <div class="col-span-12 md:col-span-4 text-center mx-auto my-2 md:my-5 px-3">
-                    <img src="<?php the_sub_field('podcast_logo'); ?>" alt="">
+                    <img class = "shadow-lg rounded-lg" src="<?php the_sub_field('podcast_logo'); ?>" alt="">
                 </div>
 
                 <div class="col-span-12 my-2 md:col-span-8 mt-5 px-3">
@@ -69,7 +69,7 @@ get_header(); ?>
             <div class="md:w-3/4 mx-auto grid grid-cols-12 gap-4 p-2">
 
                 <div class="col-span-12 md:col-span-4 text-center mx-auto my-2 md:my-5 px-3">
-                    <img src="<?php the_sub_field('podcast_logo'); ?>" alt="">
+                    <img class = "shadow-lg rounded-lg" src="<?php the_sub_field('podcast_logo'); ?>" alt="">
                 </div>
 
                 <div class="col-span-12 my-2 md:col-span-8 mt-5 px-3">
