@@ -29,22 +29,18 @@ get_header(); ?>
 
 
 <div class="bg-gray-light bio pb-20">
+
+
     <div class="md:w-3/4 mx-auto grid grid-cols-12 gap-4 p-2">
         <div class="col-span-12 md:col-span-12 lg:col-span-8 mt-5 px-3">
             <h2 class = "text-3xl md:text-4xl mb-1 font-bold">About Pastor Trent</h2>
             <p>Dr. Trent Stewart is the lead pastor of Foothills Church, a multisite church in Maryville and Knoxville TN. The church is the heart and vision of Pastor Trent who planted FC in 2009 with the support of Grace Baptist Church in Knoxville and Pastor Trent’s father, Dr. Ron Stewart – the longtime lead pastor of GBC. Since 2009, Pastor Trent’s vision and hope for FC derives from a deep passion to develop mature disciples of Christ in relational environments. Through the ministry of Foothills Church, he and the FC staff have seen phenomenal growth and ministry take place in their city and even across the globe.</p>
             <p>Dr. Trent Stewart is the lead pastor of Foothills Church, a multisite church in Maryville and Knoxville TN. The church is the heart and vision of Pastor Trent who planted FC in 2009 with the support of Grace Baptist Church in Knoxville and Pastor Trent’s father, Dr. Ron Stewart – the longtime lead pastor of GBC. Since 2009, Pastor Trent’s vision and hope for FC derives from a deep passion to develop mature disciples of Christ in relational environments. Through the ministry of Foothills Church, he and the FC staff have seen phenomenal growth and ministry take place in their city and even across the globe.</p>
         </div>
-    </div>
-
-    <div class="md:w-3/4 mx-auto grid grid-cols-12 gap-4 p-2">
-        <div class="col-span-12 md:col-span-12 lg:col-span-8 px-3">
-            <img class = "shadow-lg rounded-lg" src="https://pastor-trent-coaching.local/wp-content/uploads/2020/04/Trent-Family-Photo-rectangle-1024x687-1.jpg" alt="">
-        </div>
 
         <div class="col-span-12 lg:col-span-4 px-3">
 
-            <div class="grid grid-cols-12 gap-4">
+            <div class="grid grid-cols-12 gap-4 lg:pt-16">
                 <div class="col-span-12 md:col-span-6 lg:col-span-12">
                     <div class="bg-gray-lightest shadow-lg rounded-lg p-5">
                         <h3 class = "text-2xl md:text-3xl mb-1 font-bold">Want Certified Coaching?</h3>
