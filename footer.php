@@ -46,7 +46,7 @@
                     <a href="https://foothillschurch.com/" aria-label="Foothills Church Website"><img src="<?php the_field('footer_icon_wp', 'options'); ?>" alt="Foothills Church Icon"></a>
                 </div>
             <!--Copyright Info-->
-            <p>Helping pastors create healthy environments that grow healthy churches.</p>
+            <p>Helping pastors grow healthy churches.</p>
             <p>© <?php echo date("Y"); ?> Trent Stewart</p>
 
             </div>
