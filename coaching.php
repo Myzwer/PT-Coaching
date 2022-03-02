@@ -31,27 +31,38 @@ get_header(); ?>
         <div class="col-span-12 my-2 md:my-5 px-3 text-left md:text-center">
             <h2 class = "text-3xl md:text-4xl mb-1 font-bold"><?php the_field('cta_text'); ?></h2>
         </div>
-        <?php if (have_rows('cta_button')): ?>
-            <?php while (have_rows('cta_button')): the_row(); ?>
-                <a href="<?php the_sub_field('button_link') ?>">
+<!--        <?php /*if (have_rows('cta_button')): */?>
+            <?php /*while (have_rows('cta_button')): the_row(); */?>
+                <a href="<?php /*the_sub_field('button_link') */?>">
                     <button class="uppercase inline-block rounded-md py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
-                        <?php the_sub_field('button_text') ?>
+                        <?php /*the_sub_field('button_text') */?>
                     </button>
                 </a>
-            <?php endwhile; ?>
-        <?php endif; ?>
+            <?php /*endwhile; */?>
+        --><?php /*endif; */?>
     </div>
 
     <div class="bg-gray bio">
         <div class="md:w-3/4 mx-auto grid grid-cols-12 gap-4 p-5">
-            <div class="col-span-12 md:col-span-6 lg:col-span-8 mt-5 px-3 video-wrapper">
-                <?php the_field('video_invite'); ?>
-            </div>
-            <div class="col-span-12">
+            <div class="col-span-12 md:col-span-8 md:col-span-4">
                 <h3 class = "text-xl md:text-2xl mb-1 font-bold"><?php the_field('invite_title'); ?></h3>
                 <p><?php the_field('invite_text'); ?></p>
             </div>
+            <div class="col-span-12 md:col-span-6 bg-gray-lightest rounded-lg shadow-xl">
+                <div class="text-left p-10 text-black form">
+
+                    <!-- This will generate your form when you add it in WP Admin. -->
+                    <?php if (have_posts()) : while (have_posts()) : the_post();
+                        the_content();
+                    endwhile;
+                    else: ?>
+                        <p>Sorry, no posts matched your criteria.</p>
+                    <?php endif; ?>
+
+                </div>
+            </div>
         </div>
     </div>
+
 
 <?php get_footer();
