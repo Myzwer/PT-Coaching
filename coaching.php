@@ -31,15 +31,6 @@ get_header(); ?>
         <div class="col-span-12 my-2 md:my-5 px-3 text-left md:text-center">
             <h2 class = "text-3xl md:text-4xl mb-1 font-bold"><?php the_field('cta_text'); ?></h2>
         </div>
-<!--        <?php /*if (have_rows('cta_button')): */?>
-            <?php /*while (have_rows('cta_button')): the_row(); */?>
-                <a href="<?php /*the_sub_field('button_link') */?>">
-                    <button class="uppercase inline-block rounded-md py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
-                        <?php /*the_sub_field('button_text') */?>
-                    </button>
-                </a>
-            <?php /*endwhile; */?>
-        --><?php /*endif; */?>
     </div>
 
     <div class="bg-gray bio">
