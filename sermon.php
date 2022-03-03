@@ -11,8 +11,9 @@
  */
 
 get_header(); ?>
-<?php if( have_rows('photo_background_section') ): ?>
-    <?php while( have_rows('photo_background_section') ): the_row();?>
+
+<?php if (have_rows('photo_background_section')): ?>
+    <?php while (have_rows('photo_background_section')): the_row(); ?>
         <div class="bg-no-repeat bg-scroll bg-cover relative" style="background: linear-gradient(
                 rgba(0, 0, 0, 0.<?php the_sub_field('tint_level'); ?>),
                 rgba(0, 0, 0, 0.<?php the_sub_field('tint_level'); ?>)
@@ -28,23 +29,52 @@ get_header(); ?>
 
 
     <div class="bg-gray pb-5">
-        <div class="md:w-3/4 mx-auto grid grid-cols-12 p-2">
+        <div class="md:w-3/4 xl:w-7/12 mx-auto grid grid-cols-12 p-5">
 
-            <!-- Featured Sermon -->
+            <!-- ******** THE FEATURED SERMON ******** -->
+            <!-- "Latest sermon" text -->
             <div class="col-span-12 text-center mx-auto mt-10">
                 <h3 class="text2xl md:text-3xl mb-3 font-bold"><?php the_field('body_title_1'); ?></h3>
             </div>
 
-            <div class="col-span-12 lg:col-span-6 text-center mx-auto bg-gray-light lg:rounded-l-lg">
-                <img class="shadow-lg rounded-t-lg md:rounded-t-none md:rounded-l-lg"
-                     src="https://trentstewart.org/wp-content/uploads/2022/01/01-30-22-Sermon.jpg" alt="">
-            </div>
-            <div class="col-span-12 lg:col-span-6 p-5 bg-gray-light shadow-lg rounded-b-lg md:rounded-b-none md:rounded-r-lg">
-                <h3 class="text-xl md:text-2xl mb-1 font-bold">How To Work | Mind Your Business</h3>
-                <p>Join us as we start our series "Mind Your Business" where Pastor Trent talks about what we should be working for.</p>
-                <button class="uppercase inline-block rounded-md mt-3 py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
-                    Watch Now
-                </button>
+            <!-- Start the actual card -->
+                <?php
+                //Drop into php to call the latest post title and link
+                $recent_posts = wp_get_recent_posts(array(
+                        'post_type' => 'broadcast',
+                        'numberposts' => 1, // Number of recent posts thumbnails to display
+                        'post_status' => 'publish', // Show only the published posts
+                        'tax_query' => array( // Only Show the video posts, not podcasts.
+                            array(
+                                'taxonomy' => 'format',
+                                'terms' => 'videos',
+                                'field' => 'slug'
+                            ),
+                        )
+                    )
+                );
+
+                foreach ($recent_posts as $post) : ?>
+                <div class="col-span-12 lg:col-span-6 text-center mx-auto bg-gray-light lg:rounded-l-lg">
+                    <img class="shadow-lg rounded-t-lg md:rounded-t-none md:rounded-l-lg"
+                         src="https://trentstewart.org/wp-content/uploads/2022/01/01-30-22-Sermon.jpg" alt="">
+                </div>
+                <div class="col-span-12 lg:col-span-6 p-5 bg-gray-light shadow-lg rounded-b-lg md:rounded-b-none md:rounded-r-lg">
+                    <h3 class="text-xl md:text-2xl mb-1 font-bold">
+                        <?php echo $post['post_title'] ?>
+                    </h3>
+
+                    <p>Join us as we start our series "Mind Your Business" where Pastor Trent talks about what we should
+                        be working for.</p>
+
+                    <a href="<?php echo get_permalink($post['ID']) ?>">
+                        <button class="uppercase inline-block rounded-md mt-3 py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
+                            Watch Now
+                        </button>
+                    </a>
+                <?php endforeach;
+                wp_reset_query(); ?>
+
             </div>
             <!-- End Featured Sermon -->
 
@@ -83,9 +113,9 @@ get_header(); ?>
                     ?>
 
                     <div class="col-span-12 p-5 mb-8 bg-gray-light shadow-lg rounded-lg">
-                        <h3 class="text-xl md:text-2xl font-bold"><?php echo get_the_title();?></h3>
-                        <p class = "font-bold pb-3"><?php echo get_the_date();?></p>
-                        <p><?php echo the_excerpt();?></p>
+                        <h3 class="text-xl md:text-2xl font-bold"><?php echo get_the_title(); ?></h3>
+                        <p class="font-bold pb-3"><?php echo get_the_date(); ?></p>
+                        <p><?php echo the_excerpt(); ?></p>
                         <a href="<?php the_permalink(); ?>">
                             <button class="uppercase inline-block rounded-md mt-3 py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
                                 Watch Now
@@ -126,4 +156,6 @@ get_header(); ?>
             <!-- End Pagination -->
         </div>
     </div>
+
+
 <?php get_footer();
