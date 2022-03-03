@@ -75,6 +75,9 @@ get_header(); ?>
             </div>
 
         </div>
+        <div class="col-span-12 md:col-span-6 pl-5">
+                <img class = "shadow-lg rounded-lg" src="<?php the_field('family_photo'); ?>" alt="Pastor Trent Family Photo">
+        </div>
     </div>
 </div>
 
