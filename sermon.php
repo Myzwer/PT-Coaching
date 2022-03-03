@@ -56,16 +56,16 @@ get_header(); ?>
 
                 foreach ($recent_posts as $post) : ?>
                 <div class="col-span-12 lg:col-span-6 text-center mx-auto bg-gray-light lg:rounded-l-lg">
-                    <img class="shadow-lg rounded-t-lg md:rounded-t-none md:rounded-l-lg"
-                         src="https://trentstewart.org/wp-content/uploads/2022/01/01-30-22-Sermon.jpg" alt="">
+<!--                    <img class=""-->
+<!--                         src="https://trentstewart.org/wp-content/uploads/2022/01/01-30-22-Sermon.jpg" alt="">-->
+                    <?php echo get_the_post_thumbnail($post['ID'], 'post-thumbnail', array( 'class' => 'shadow-lg rounded-t-lg md:rounded-t-none md:rounded-l-lg' ));?>
                 </div>
                 <div class="col-span-12 lg:col-span-6 p-5 bg-gray-light shadow-lg rounded-b-lg md:rounded-b-none md:rounded-r-lg">
                     <h3 class="text-xl md:text-2xl mb-1 font-bold">
                         <?php echo $post['post_title'] ?>
                     </h3>
 
-                    <p>Join us as we start our series "Mind Your Business" where Pastor Trent talks about what we should
-                        be working for.</p>
+                    <p><?php echo wp_trim_words(get_the_content(null, false, $post['ID']), 55) ?></p>
 
                     <a href="<?php echo get_permalink($post['ID']) ?>">
                         <button class="uppercase inline-block rounded-md mt-3 py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
