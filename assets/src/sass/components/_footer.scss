@@ -53,6 +53,7 @@ $color: #ffffff;
   // The Logo
   img {
     margin: 0 auto;
+    padding-bottom: 10px;
     width: 50%;
   }
 
@@ -220,12 +221,14 @@ $color: #ffffff;
 
     .logo {
       margin-top: 20px;
-      width: 30%;
+      margin-bottom: 30px;
+      padding: 0;
+      width: 20%;
     }
   }
 
   .right-inner {
-    margin-left: 30%;
+    margin-left: 40%;
     margin-top: 13%;
   }
 }
