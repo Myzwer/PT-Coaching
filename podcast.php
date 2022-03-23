@@ -91,11 +91,52 @@ get_header(); ?>
                             </button>
                         </a>
                     <?php endif; ?>
+
+                    <?php if (get_sub_field('google_podcast_link')): ?>
+                        <a href="<?php the_sub_field('google_podcast_link'); ?>">
+                            <button class="uppercase inline-block rounded-md mt-3 py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
+                                <?php the_sub_field('google_podcast_button_text'); ?>
+                            </button>
+                        </a>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
     <?php endwhile; ?>
 <?php endif; ?>
 
+<?php if (have_rows('podcast_3')): ?>
+    <?php while (have_rows('podcast_3')): the_row(); ?>
+        <div class="bg-gray bio pb-5">
+            <div class="md:w-3/4 mx-auto grid grid-cols-12 gap-4 p-2">
+
+                <div class="col-span-12 md:col-span-4 text-center mx-auto my-2 md:my-5 px-3">
+                    <img class = "shadow-lg rounded-lg" src="<?php the_sub_field('podcast_logo'); ?>" alt="">
+                </div>
+
+                <div class="col-span-12 my-2 md:col-span-8 mt-5 px-3">
+                    <h3 class="text-xl md:text-2xl mb-1 font-bold"><?php the_sub_field('podcast_title'); ?></h3>
+                    <p><?php the_sub_field('podcast_description'); ?></p>
+
+                    <?php if (get_sub_field('spotify_link')): ?>
+                        <a href="<?php the_sub_field('spotify_link'); ?>">
+                            <button class="uppercase inline-block rounded-md mt-3 py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
+                                <?php the_sub_field('spotify_button_text'); ?>
+                            </button>
+                        </a>
+                    <?php endif; ?>
+
+                    <?php if (get_sub_field('apple_music_link')): ?>
+                        <a href="<?php the_sub_field('apple_music_link'); ?>">
+                            <button class="uppercase inline-block rounded-md mt-3 py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
+                                <?php the_sub_field('apple_music_button_text'); ?>
+                            </button>
+                        </a>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
+    <?php endwhile; ?>
+<?php endif; ?>
 
 <?php get_footer();
