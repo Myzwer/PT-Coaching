@@ -17,7 +17,7 @@ get_header(); ?>
                 rgba(0, 0, 0, 0.<?php the_sub_field('tint_level'); ?>),
                 rgba(0, 0, 0, 0.<?php the_sub_field('tint_level'); ?>)
                 ), url('<?php the_sub_field('background_image_url'); ?>') <?php the_sub_field('bg-pos-x'); ?> <?php the_sub_field('bg-pos-y'); ?>;
-                height: <?php the_sub_field('background_height'); ?>vh;">
+                height: <?php the_sub_field('background_height'); ?>vh;  background-repeat: no-repeat; background-size: cover;">
             <div class="absolute bottom-10 left-5 md:left-10 text-white">
                 <h1 class="text-4xl md:text-5xl mb-3"><?php the_sub_field('page_title'); ?></h1>
                 <p class="text-xl md:text-2xl mb-3"><?php the_sub_field('page_description'); ?></p>
