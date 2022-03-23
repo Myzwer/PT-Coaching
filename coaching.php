@@ -11,8 +11,8 @@
  */
 
 get_header(); ?>
-<?php if( have_rows('photo_background_section') ): ?>
-    <?php while( have_rows('photo_background_section') ): the_row();?>
+<?php if (have_rows('photo_background_section')): ?>
+    <?php while (have_rows('photo_background_section')): the_row(); ?>
         <div class="bg-no-repeat bg-scroll bg-cover relative" style="background: linear-gradient(
                 rgba(0, 0, 0, 0.<?php the_sub_field('tint_level'); ?>),
                 rgba(0, 0, 0, 0.<?php the_sub_field('tint_level'); ?>)
@@ -26,22 +26,19 @@ get_header(); ?>
     <?php endwhile; ?>
 <?php endif; ?>
 
-
-    <div class="bg-gray-light text-center mx-auto py-10">
-        <div class="col-span-12 my-2 md:my-5 px-3 text-left md:text-center">
-            <h2 class = "text-3xl md:text-4xl mb-1 font-bold"><?php the_field('cta_text'); ?></h2>
-        </div>
-    </div>
-
     <div class="bg-gray bio">
-        <div class="md:w-3/4 mx-auto grid grid-cols-12 gap-4 p-5">
-            <div class="col-span-12 md:col-span-8 md:col-span-4">
-                <h3 class = "text-xl md:text-2xl mb-1 font-bold"><?php the_field('invite_title'); ?></h3>
-                <p><?php the_field('invite_text'); ?></p>
-            </div>
-            <div class="col-span-12 md:col-span-6 bg-gray-lightest rounded-lg shadow-xl">
-                <div class="text-left p-10 text-black form">
+        <div class="md:w-11/12 lg:w-3/4 mx-auto grid grid-cols-12 p-5">
 
+            <div class="col-span-12 md:col-span-4 md:col-span-5 bg-gray-dark text-white px-5 relative rounded-t-xl md:rounded-t-none md:rounded-l-xl">
+                <div class="content-middle-medium mx-auto p-3 md:w-10/12">
+                    <h3 class="text-2xl mb-1 font-bold"><?php the_field('invite_title'); ?></h3>
+                    <p><?php the_field('invite_text'); ?></p>
+                </div>
+            </div>
+
+            <div class="col-span-12 md:col-span-7 bg-gray-lightest rounded-b-xl md:rounded-b-none md:rounded-r-xl">
+                <div class="text-left p-10 text-black form">
+                    <h2 class="text-xl md:text-3xl mb-5 font-bold"><?php the_field('cta_text'); ?></h2>
                     <!-- This will generate your form when you add it in WP Admin. -->
                     <?php if (have_posts()) : while (have_posts()) : the_post();
                         the_content();
