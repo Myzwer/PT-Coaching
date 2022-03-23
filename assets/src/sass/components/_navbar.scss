@@ -31,9 +31,9 @@ $button-hover-color: #1f2d3d; // What hover color do you want the button to be?
 .brand {
   float: left;
   font-size: 1.4em;
+  font-weight: 400;
   line-height: $nav-height;
   padding-left: 20px;
-  padding-top: 5px;
   position: absolute;
   text-transform: uppercase;
   a,

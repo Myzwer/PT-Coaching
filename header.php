@@ -39,10 +39,9 @@
 <section class="navigation">
     <div class="nav-container">
         <div class="brand">
-            <a href="/frontpage">
+            <a href="/">
                 <!--Company Logo / Branding. Template supports both Text and Logo-->
-                <img src="<?php the_field('header_image_wp', 'options'); ?>"
-                     alt="Company Logo">
+               <h1>Dr. Trent Stewart</h1>
             </a>
         </div>
 
