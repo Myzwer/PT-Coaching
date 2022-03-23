@@ -13,7 +13,7 @@
 
 // Navbar quick settings
 $content-width: 2000px; // How wide or narrow do you want the bar to be?
-$breakpoint: 799px; // When do you want to switch from mobile to desktop?
+$breakpoint: 900px; // When do you want to switch from mobile to desktop?
 $nav-height: 80px; // How tall do you want the navbar to be?
 $nav-background: #f9f9f9; // What background color do you want?
 $nav-font-color: #333333; // What primary font color?
@@ -95,7 +95,7 @@ nav {
 }
 
 // removes the position absolute from mobile.
-@media screen and (min-width: 40em) {
+@media screen and (min-width: 900px) {
   nav {
     position: relative;
   }
@@ -121,7 +121,7 @@ nav {
   top: 0;
   width: $nav-height;
 }
-@media only screen and (max-width: 798px) {
+@media only screen and (max-width: 900px) {
   // Hamburger nav visible on mobile only
   .nav-mobile {
     display: block;
