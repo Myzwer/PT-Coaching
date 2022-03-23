@@ -90,6 +90,7 @@ get_header(); ?>
                 'post_type' => array('broadcast'),
                 'post_status' => array('publish'),
                 'nopaging' => false,
+                'offset' => 1,
                 'order' => 'DESC',
                 'orderby' => 'date',
                 'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1,
