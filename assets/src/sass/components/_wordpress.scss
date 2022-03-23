@@ -44,6 +44,8 @@
   position: relative;
 }
 .video-wrapper iframe {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   height: 100%;
   left: 0;
   position: absolute;
