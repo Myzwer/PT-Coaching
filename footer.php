@@ -23,7 +23,6 @@
         <div class="left-inner">
             <!--Company Info-->
             <h3>Trent Stewart</h3>
-            <p class="phone-number">(865) 982-7306</p>
         </div>
     </div>
 
@@ -46,7 +45,7 @@
                     <a href="https://foothillschurch.com/" aria-label="Foothills Church Website"><img src="<?php the_field('footer_icon_wp', 'options'); ?>" alt="Foothills Church Icon"></a>
                 </div>
             <!--Copyright Info-->
-            <p>Helping pastors grow healthy churches.</p>
+            <p>Helping everyday leaders make everyday count.</p>
             <p>© <?php echo date("Y"); ?> Trent Stewart</p>
 
             </div>
