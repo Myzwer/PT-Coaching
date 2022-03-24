@@ -94,7 +94,7 @@ if( function_exists('acf_add_options_page') ) {
 //*****************************************************
 
 function tn_custom_excerpt_length( $length ) {
-	return 100;
+	return 20;
 }
 add_filter( 'excerpt_length', 'tn_custom_excerpt_length', 999 );
 
