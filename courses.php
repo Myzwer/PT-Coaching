@@ -35,7 +35,7 @@ get_header(); ?>
                 <?php if (have_rows('cta_button')): ?>
                     <?php while (have_rows('cta_button')): the_row(); ?>
                         <a href="<?php the_sub_field('button_link') ?>">
-                            <button class="uppercase md:inline-block rounded-md py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
+                            <button class="uppercase md:inline-block rounded-md py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300 mb-5">
                                 <?php the_sub_field('button_text') ?>
                             </button>
                         </a>
