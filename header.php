@@ -41,7 +41,8 @@
         <div class="brand">
             <a href="/">
                 <!--Company Logo / Branding. Template supports both Text and Logo-->
-               <h1>Dr. Trent Stewart</h1>
+                <img class = "logo inline" src="<?php the_field('header_image_wp', 'options'); ?>">
+                <h1>Dr. Trent Stewart</h1>
             </a>
         </div>
 
