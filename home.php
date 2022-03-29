@@ -48,7 +48,7 @@ if (is_home()) {
             ?>
             <!-- ******** THE FEATURED SERMON ******** -->
             <!-- "Latest sermon" text -->
-            <div class="col-span-12 text-center mx-auto mt-10">
+            <div class="col-span-12 text-center mx-auto">
                 <h3 class="text-2xl md:text-3xl mb-3 font-bold"><?php the_field('body_title_1', $post_id); ?></h3>
             </div>
 
@@ -75,11 +75,14 @@ if (is_home()) {
 
             </div>
         </div>
-    </div>
 
-    <div class="m-4 md:m-10 lg:max-w-4xl lg:text-center lg:mx-auto">
+
+    <div class="m-4 md:m-10 lg:max-w-4xl lg:mx-auto">
         <!-- All Other Posts -->
         <div class="grid grid-cols-12 gap-4 mt-6 ">
+            <div class="col-span-12 text-center mx-auto">
+                <h3 class="text2xl md:text-3xl mb-3 font-bold"><?php the_field('body_title_2', $post_id); ?></h3>
+            </div>
             <?php
             /*
              * This little php block handles a few things.
@@ -114,21 +117,15 @@ if (is_home()) {
                 $loop->the_post();
                 ?>
 
-                <div class="blog-card col-span-12 md:col-span-6 rounded-xl shadow-xl">
-                    <?php the_post_thumbnail(); ?>
-                    <div class="p-4 text-left">
-                        <h6 class=""><span class="font-bold">Category</span> - <span
-                                    class="opacity-60"> <?php echo get_the_date(); ?> </span>
-                        </h6>
-                        <h2 class="text-2xl font-bold capitalize"><?php echo '<a href="' . get_permalink() . '">' . get_the_title() . '</a>'; ?></h2>
-                        <?php the_excerpt('<p class = "blog-excerpt">', '</p>'); ?>
-                        <p class="mt-5 font-bold">Written by: <?php the_author(); ?></p>
-                        <a href="<?php echo get_permalink(); ?>">
-                            <button class="mx-auto lg:mx-0 shadow-xl bg-black text-white font-bold rounded-full my-6 py-2 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                                Read More
-                            </button>
-                        </a>
-                    </div>
+                <div class="col-span-12 p-5 mb-8 bg-gray-light shadow-lg rounded-lg">
+                    <h3 class="text-xl md:text-2xl font-bold"><?php echo get_the_title(); ?></h3>
+                    <p class="font-bold pb-3"><?php echo get_the_date(); ?> | <?php the_author(); ?></p>
+                    <p><?php echo the_excerpt(); ?></p>
+                    <a href="<?php the_permalink(); ?>">
+                        <button class="uppercase inline-block rounded-md mt-3 py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
+                            Read More
+                        </button>
+                    </a>
                 </div>
 
             <?php endwhile; ?>
@@ -136,7 +133,7 @@ if (is_home()) {
         <?php wpbeginner_numeric_posts_nav(); ?>
 
     </div>
-
+    </div>
 
 <?php
 get_footer();
