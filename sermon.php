@@ -29,7 +29,7 @@ get_header(); ?>
 
 
     <div class="bg-gray pb-5">
-        <div class="md:w-3/4 xl:w-7/12 mx-auto grid grid-cols-12 p-5">
+        <div class="md:w-9/12 mx-auto grid grid-cols-12 p-5">
 
             <!-- ******** THE FEATURED SERMON ******** -->
             <!-- "Latest sermon" text -->
@@ -56,9 +56,13 @@ get_header(); ?>
 
                 foreach ($recent_posts as $post) : ?>
                 <div class="col-span-12 lg:col-span-6 text-center mx-auto bg-gray-light lg:rounded-l-lg">
-<!--                    <img class=""-->
-<!--                         src="https://trentstewart.org/wp-content/uploads/2022/01/01-30-22-Sermon.jpg" alt="">-->
-                    <?php echo get_the_post_thumbnail($post['ID'], 'post-thumbnail', array( 'class' => 'shadow-lg rounded-t-lg md:rounded-t-none md:rounded-l-lg' ));?>
+                    <div class="bg-no-repeat bg-scroll bg-cover relative shadow-lg rounded-t-lg md:rounded-t-none md:rounded-l-lg"
+                         style="background: url('') no-repeat center center scroll;
+                                 background-size: cover; height: 30vh;">
+                        <img src="<?php echo get_the_post_thumbnail_url($post['ID'], 'post-thumbnail');?>" alt="">
+
+                    </div>
+
                 </div>
                 <div class="col-span-12 lg:col-span-6 p-5 bg-gray-light shadow-lg rounded-b-lg md:rounded-b-none md:rounded-r-lg">
                     <h3 class="text-xl md:text-2xl mb-1 font-bold">
