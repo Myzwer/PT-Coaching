@@ -60,7 +60,7 @@ if (is_home()) {
                 <div class="col-span-12 lg:col-span-7">
                     <div class="bg-no-repeat bg-scroll bg-cover relative shadow-lg rounded-t-lg md:rounded-t-none md:rounded-l-lg"
                          style="background: url('<?php the_post_thumbnail_url(); ?>') no-repeat center center scroll;
-                                 background-size: cover; height: 30vh;">
+                                 background-size: cover; height: 43vh;">
                     </div>
                 </div>
                 <!-- End Post Thumbnail -->
