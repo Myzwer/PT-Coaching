@@ -42,52 +42,55 @@ if (is_home()) {
     <div class="bg-gray pb-5">
 
         <!-- Featured Post -->
-        <div class="md:w-3/4 xl:w-7/12 mx-auto grid grid-cols-12 p-5">
+        <div class="md:w-9/12 mx-auto grid grid-cols-12 p-5">
             <!-- Start the loop -->
             <?php
             $posts_query = new WP_Query('posts_per_page=1'); // limit post to 1 since this is our featured post
             while ($posts_query->have_posts()) :
-            $posts_query->the_post();
-            ?>
+                $posts_query->the_post();
+                ?>
 
-            <!-- "Latest sermon" text -->
-            <div class="col-span-12 text-center mx-auto">
-                <h3 class="text-2xl md:text-3xl mb-3 font-bold"><?php the_field('body_title_1', $post_id); ?></h3>
-            </div>
-            <!-- End "Latest sermon" text -->
+                <!-- "Latest sermon" text -->
+                <div class="col-span-12 text-center mx-auto my-5">
+                    <h3 class="text-2xl md:text-3xl mb-3 font-bold"><?php the_field('body_title_1', $post_id); ?></h3>
+                </div>
+                <!-- End "Latest sermon" text -->
 
-            <!-- Get Post Thumbnail -->
-            <div class="col-span-12 lg:col-span-7">
-                <?php the_post_thumbnail('post-thumbnail', array('class' => 'shadow-lg rounded-t-lg md:rounded-t-none md:rounded-l-lg')); ?>
-            </div>
-            <!-- End Post Thumbnail -->
+                <!-- Get Post Thumbnail -->
+                <div class="col-span-12 lg:col-span-7">
+                    <div class="bg-no-repeat bg-scroll bg-cover relative shadow-lg rounded-t-lg md:rounded-t-none md:rounded-l-lg"
+                         style="background: url('<?php the_post_thumbnail_url(); ?>') no-repeat center center scroll;
+                                 background-size: cover; height: 30vh;">
+                    </div>
+                </div>
+                <!-- End Post Thumbnail -->
 
-            <!-- Info / Link Side of card -->
-            <div class="col-span-12 lg:col-span-5 p-5 bg-gray-light shadow-lg rounded-b-lg md:rounded-b-none md:rounded-r-lg">
-                <h3 class="text-xl md:text-2xl mb-1 font-bold">
-                    <?php echo get_the_title(); ?>
-                </h3>
-                <h6><span class="font-bold">Category</span> | <span> <?php echo get_the_date(); ?> </span>
-                </h6>
+                <!-- Info / Link Side of card -->
+                <div class="col-span-12 lg:col-span-5 p-5 bg-gray-light shadow-lg rounded-b-lg md:rounded-b-none md:rounded-r-lg">
+                    <h3 class="text-xl md:text-2xl mb-1 font-bold">
+                        <?php echo get_the_title(); ?>
+                    </h3>
+                    <h6 class="font-bold"><?php echo get_the_date(); ?> | <?php the_author(); ?>
+                    </h6>
 
-                <p><?php the_excerpt('<p class = "blog-excerpt">', '</p>'); ?></p>
+                    <p><?php the_excerpt('<p class = "blog-excerpt">', '</p>'); ?></p>
 
-                <a href="<?php echo get_permalink(); ?>">
-                    <button class="mx-auto lg:mx-0 shadow-xl bg-black text-white font-bold rounded-full my-6 py-2 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                        Read More
-                    </button>
-                </a>
-            </div>
-            <!-- End Info / Link Side of card -->
+                    <a href="<?php echo get_permalink(); ?>">
+                        <button class="mx-auto lg:mx-0 shadow-xl bg-black text-white font-bold rounded-full my-6 py-2 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+                            Read More
+                        </button>
+                    </a>
+                </div>
+                <!-- End Info / Link Side of card -->
 
-            <!-- End Loop -->
+                <!-- End Loop -->
             <?php endwhile;
             wp_reset_query(); ?>
         </div>
         <!-- End Featured Post -->
 
         <!-- Start All Other Posts -->
-        <div class="md:w-3/4 xl:w-7/12 mx-auto p-5">
+        <div class="md:w-9/12 mx-auto p-5">
             <div class="grid grid-cols-12 gap-4 mt-6">
 
                 <!-- "All sermons" text -->
