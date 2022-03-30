@@ -4,7 +4,7 @@
  * Sometimes wordpress generates things and tailwind can't hit it. This edits those.
  * - Single - Category
  * - Privacy Policy Styles
- *
+ * - Blog Page
  *
  *
  */
@@ -51,4 +51,9 @@
   position: absolute;
   top: 0;
   width: 100%;
+}
+
+// Blog Page
+.blog-content p {
+  padding-bottom: 15px;
 }
