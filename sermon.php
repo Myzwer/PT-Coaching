@@ -55,15 +55,13 @@ get_header(); ?>
                 );
 
                 foreach ($recent_posts as $post) : ?>
-                <div class="col-span-12 lg:col-span-6 text-center mx-auto bg-gray-light lg:rounded-l-lg">
+                <div class="col-span-12 lg:col-span-6 text-center bg-gray-light lg:rounded-l-lg">
                     <div class="bg-no-repeat bg-scroll bg-cover relative shadow-lg rounded-t-lg md:rounded-t-none md:rounded-l-lg"
-                         style="background: url('') no-repeat center center scroll;
-                                 background-size: cover; height: 30vh;">
-                        <img src="<?php echo get_the_post_thumbnail_url($post['ID'], 'post-thumbnail');?>" alt="">
-
+                         style="background: url('<?php echo get_the_post_thumbnail_url($post['ID'], 'post-thumbnail');?>') no-repeat center center scroll;
+                                 background-size: cover; height: 40vh;">
                     </div>
 
-                </div>
+<!--                    -->                </div>
                 <div class="col-span-12 lg:col-span-6 p-5 bg-gray-light shadow-lg rounded-b-lg md:rounded-b-none md:rounded-r-lg">
                     <h3 class="text-xl md:text-2xl mb-1 font-bold">
                         <?php echo $post['post_title'] ?>
