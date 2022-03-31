@@ -11,9 +11,6 @@
 
 /* stylelint-disable selector-no-qualifying-type */
 .pagination {
-  ul {
-    margin-top: 40px;
-  }
   li {
     display: inline;
   }
@@ -22,7 +19,7 @@
   li a:hover,
   li.active a,
   li.disabled {
-    background-color: #333333;
+    background-color: #3c4858;
     border-radius: 3px;
     color: #dddddd;
     cursor: pointer;
@@ -32,7 +29,7 @@
 
   li a:hover,
   li.active a {
-    background-color: #000000;
+    background-color: #1f2d3d;
   }
 }
 /* stylelint-enable selector-no-qualifying-type */

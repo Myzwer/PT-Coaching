@@ -23,7 +23,7 @@
     <link rel="profile" href="https://gmpg.org/xfn/11">
 
     <!--Font Awesome Loadin-->
-    <script src="https://kit.fontawesome.com/aa36ddf53c.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/e9f0a6af17.js" crossorigin="anonymous"></script>
 
     <!--Wordpress Required Stuff-->
     <?php wp_head(); ?>
@@ -39,10 +39,10 @@
 <section class="navigation">
     <div class="nav-container">
         <div class="brand">
-            <a href="/frontpage">
+            <a href="/">
                 <!--Company Logo / Branding. Template supports both Text and Logo-->
-                <img src="https://pastor-trent-coaching.local/wp-content/uploads/2020/04/icon-dark.png"
-                     alt="Company Logo">
+                <img class = "logo inline" src="<?php the_field('header_image_wp', 'options'); ?>">
+                <h1>Dr. Trent Stewart</h1>
             </a>
         </div>
 

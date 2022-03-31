@@ -82,13 +82,19 @@ function register_col_2() {
 }
 add_action( 'init', 'register_col_2' );
 
+//*****************************************************
+//***************** OPTIONS PAGE **********************
+//*****************************************************
+if( function_exists('acf_add_options_page') ) {
+    acf_add_options_page();
+}
 
 //*****************************************************
 //******************* P O S T S ***********************
 //*****************************************************
 
 function tn_custom_excerpt_length( $length ) {
-	return 20;
+	return 40;
 }
 add_filter( 'excerpt_length', 'tn_custom_excerpt_length', 999 );
 

@@ -9,7 +9,7 @@
 */
 
 /* Color Settings */
-$background-color: #222222;
+$background-color: #1f2d3d;
 $color: #ffffff;
 
 /*
@@ -53,6 +53,7 @@ $color: #ffffff;
   // The Logo
   img {
     margin: 0 auto;
+    padding-bottom: 10px;
     width: 50%;
   }
 
@@ -126,12 +127,16 @@ $color: #ffffff;
 
 // Socials
 .footer-icons {
-  margin-top: 25px;
+
+  img {
+    display: inline;
+    padding: 4px;
+  }
 }
 
 .footer-icons a {
-  background-color: #33383b;
-  border-radius: 2px;
+  background-color: #3c4858;
+  border-radius: 5px;
   color: #ffffff;
   cursor: pointer;
   display: inline-block;
@@ -142,6 +147,10 @@ $color: #ffffff;
   margin-right: 3px;
   text-align: center;
   width: 35px;
+}
+
+.icons-inner {
+  margin-bottom: 10px;
 }
 
 /*
@@ -207,16 +216,19 @@ $color: #ffffff;
 
 @media screen and (min-width: 64em) {
   .footer {
+    padding-bottom: 15px;
     padding-top: 10px;
 
-    img {
-      margin-top: 20px;
-      width: 30%;
+    .logo {
+      margin-bottom: 30px;
+      margin-top: 60px;
+      padding: 0;
+      width: 20%;
     }
   }
 
   .right-inner {
-    margin-left: 30%;
-    margin-top: 18%;
+    margin-left: 40%;
+    margin-top: 13%;
   }
 }

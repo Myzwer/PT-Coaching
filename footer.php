@@ -19,11 +19,10 @@
     <div class="footer-left">
 
         <!--Company Logo-->
-        <img src="https://images.squarespace-cdn.com/content/v1/575a6067b654f9b902f452f4/1552683653140-0UUVQSSUEWVC73AWAEQG/300Logo.png">
+        <img class = "logo" src="<?php the_field('footer_image_wp', 'options'); ?>">
         <div class="left-inner">
             <!--Company Info-->
-            <h3>Fancy Company</h3>
-            <p class="phone-number">+1 234-567-8901</p>
+            <h3>Trent Stewart</h3>
         </div>
     </div>
 
@@ -37,19 +36,19 @@
     </div>
     <div class="footer-bottom">
         <div class="bot-inner">
-
-            <!--Copyright Info-->
-            <p>Some Text</p>
-            <p>© <?php echo date("Y"); ?> Website Company Name</p>
-
             <!--Socials, icons from: https://fontawesome.com/ -->
             <div class="footer-icons">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-            <a href="#"><i class="fa fa-youtube"></i></a>
-        </div>
+                <div class="icons-inner">
+                    <a href="https://www.facebook.com/trentonjstewart"><i class="fa fa-facebook" aria-label="Trent Stewart Facebook"></i></a>
+                    <a href="https://www.instagram.com/trentonjstewart/?hl=en"><i class="fa fa-instagram" aria-label="Trent Stewart Instagram"></i></a>
+                    <a href="https://www.youtube.com/channel/UC2_Vo0eFmYaMq3SiA0PQLaQ"><i class="fa fa-youtube" aria-label="Trent Stewart Youtube"></i></a>
+                    <a href="https://foothillschurch.com/" aria-label="Foothills Church Website"><img src="<?php the_field('footer_icon_wp', 'options'); ?>" alt="Foothills Church Icon"></a>
+                </div>
+            <!--Copyright Info-->
+            <p>Helping everyday leaders make every day count.</p>
+            <p>© <?php echo date("Y"); ?> Trent Stewart</p>
+
+            </div>
     </div>
 </footer>
 <!--End Footer-->

@@ -4,7 +4,7 @@
  * Sometimes wordpress generates things and tailwind can't hit it. This edits those.
  * - Single - Category
  * - Privacy Policy Styles
- *
+ * - Blog Page
  *
  *
  */
@@ -28,4 +28,32 @@
     font-weight: 800;
     padding-top: 10px;
   }
+}
+
+/* About Us Page */
+// I don't know how many paragraphs will get generated so this code adds some padding to the bottom of the paragraphs
+.bio {
+  p {
+    padding-bottom: 10px;
+  }
+}
+
+.video-wrapper {
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 */
+  position: relative;
+}
+.video-wrapper iframe {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+// Blog Page
+.blog-content p {
+  padding-bottom: 15px;
 }
