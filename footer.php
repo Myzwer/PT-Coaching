@@ -45,7 +45,7 @@
                     <a href="https://foothillschurch.com/" aria-label="Foothills Church Website"><img src="<?php the_field('footer_icon_wp', 'options'); ?>" alt="Foothills Church Icon"></a>
                 </div>
             <!--Copyright Info-->
-            <p>Helping everyday leaders make everyday count.</p>
+            <p>Helping everyday leaders make every day count.</p>
             <p>© <?php echo date("Y"); ?> Trent Stewart</p>
 
             </div>
