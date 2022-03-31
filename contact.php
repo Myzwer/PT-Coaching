@@ -46,7 +46,9 @@ get_header(); ?>
                     else: ?>
                         <p>Sorry, no posts matched your criteria.</p>
                     <?php endif; ?>
-
+                    <p class = "text-sm text-gray-dark">This site is protected by reCAPTCHA and the Google
+                    <a class = "underline" href="https://policies.google.com/privacy">Privacy Policy</a> and
+                    <a class = "underline" href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
                 </div>
             </div>
 
