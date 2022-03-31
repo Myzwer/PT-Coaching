@@ -24,7 +24,7 @@ get_header(); ?>
                 <p class="md:mt-10"><?php the_field('subtitle', 1238); ?></p>
                 <h1 class="uppercase text-2xl md:text-3xl md:mb-3"><?php the_field('title', 1238); ?></h1>
                 <p class = "mb-5" ><?php the_field('explination', 1238); ?></p>
-                <ahref="<?php the_field('button_link', 1238); ?>">
+                <a href="<?php the_field('button_link', 1238); ?>">
                 <button class="uppercase inline-block rounded-md py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300 mb-10">
                     <?php the_field('button_text', 1238) ?>
                 </button>
