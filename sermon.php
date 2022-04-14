@@ -88,11 +88,26 @@ get_header(); ?>
 
             <?php
             // WP_Query arguments
+            $latest_post_args = array(
+                'post_type'     => 'broadcast',
+                'numberposts'   => 1,
+                'fields'        => 'ids',
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => 'format',
+                        'terms' => 'videos',
+                        'field' => 'slug'
+                    )
+                )
+            );
+
+            $latest_post_ids = get_posts( $latest_post_args );
+
             $args = array(
                 'post_type' => array('broadcast'),
                 'post_status' => array('publish'),
                 'nopaging' => false,
-                'offset' => 1,
+                'post__not_in' => $latest_post_ids,
                 'order' => 'DESC',
                 'orderby' => 'date',
                 'paged' => (get_query_var('paged')) ? get_query_var('paged') : 1,
@@ -131,6 +146,7 @@ get_header(); ?>
                 <!-- Start Pagination-->
                 <div class="col-span-12 p-5 mb-8 pagination text-center">
                     <?php
+
                     echo paginate_links(array(
                         'base' => str_replace(999999999, '%#%', esc_url(get_pagenum_link(999999999))),
                         'total' => $broadcasts->max_num_pages,
