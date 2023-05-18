@@ -29,7 +29,7 @@ get_header(); ?>
     <div class="bg-gray py-10">
         <div class="md:w-2/3 mx-auto grid grid-cols-12 gap-4 p-4">
             <div class="col-span-12 mx-auto">
-                <h1 class = "text-4xl uppercase">Courses coming Summer 2022</h1>
+                <h1 class = "text-4xl uppercase"><?php the_field('cta_text') ?></h1>
                 <p class = "mb-5 text-black"><?php the_field('cta_copy') ?></p>
 
                 <?php if (have_rows('cta_button')): ?>
