@@ -28,8 +28,8 @@ get_header(); ?>
 <?php endif; ?>
 
 
-<?php if (have_rows('podcast_1')): ?>
-    <?php while (have_rows('podcast_1')): the_row(); ?>
+<?php if (have_rows('podcast_3')): ?>
+    <?php while (have_rows('podcast_3')): the_row(); ?>
         <div class="bg-gray bio pb-5">
             <div class="md:w-3/4 mx-auto grid grid-cols-12 gap-4 p-2">
 
@@ -63,8 +63,8 @@ get_header(); ?>
     <?php endwhile; ?>
 <?php endif; ?>
 
-<?php if (have_rows('podcast_2')): ?>
-    <?php while (have_rows('podcast_2')): the_row(); ?>
+<?php if (have_rows('podcast_1')): ?>
+    <?php while (have_rows('podcast_1')): the_row(); ?>
         <div class="bg-gray-light bio pb-5">
             <div class="md:w-3/4 mx-auto grid grid-cols-12 gap-4 p-2">
 
@@ -105,8 +105,8 @@ get_header(); ?>
     <?php endwhile; ?>
 <?php endif; ?>
 
-<?php if (have_rows('podcast_3')): ?>
-    <?php while (have_rows('podcast_3')): the_row(); ?>
+<?php if (have_rows('podcast_2')): ?>
+    <?php while (have_rows('podcast_2')): the_row(); ?>
         <div class="bg-gray bio pb-5">
             <div class="md:w-3/4 mx-auto grid grid-cols-12 gap-4 p-2">
 
