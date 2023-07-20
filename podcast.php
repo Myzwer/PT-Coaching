@@ -28,41 +28,6 @@ get_header(); ?>
 <?php endif; ?>
 
 
-<?php if (have_rows('podcast_3')): ?>
-    <?php while (have_rows('podcast_3')): the_row(); ?>
-        <div class="bg-gray bio pb-5">
-            <div class="md:w-3/4 mx-auto grid grid-cols-12 gap-4 p-2">
-
-                <div class="col-span-12 md:col-span-4 text-center mx-auto my-2 md:my-5 px-3">
-                    <img class = "shadow-lg rounded-lg" src="<?php the_sub_field('podcast_logo'); ?>" alt="">
-                </div>
-
-                <div class="col-span-12 my-2 md:col-span-8 mt-5 px-3">
-                    <h3 class="text-xl md:text-2xl mb-1 font-bold"><?php the_sub_field('podcast_title'); ?></h3>
-
-                    <p><?php the_sub_field('podcast_description'); ?></p>
-
-                    <?php if (get_sub_field('spotify_link')): ?>
-                        <a href="<?php the_sub_field('spotify_link'); ?>">
-                            <button class="uppercase inline-block rounded-md mt-3 py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
-                                <?php the_sub_field('spotify_button_text'); ?>
-                            </button>
-                        </a>
-                    <?php endif; ?>
-
-                    <?php if (get_sub_field('apple_music_link')): ?>
-                        <a href="<?php the_sub_field('apple_music_link'); ?>">
-                        <button class="uppercase inline-block rounded-md mt-3 py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
-                            <?php the_sub_field('apple_music_button_text'); ?>
-                        </button>
-                    </a>
-                    <?php endif; ?>
-                </div>
-            </div>
-        </div>
-    <?php endwhile; ?>
-<?php endif; ?>
-
 <?php if (have_rows('podcast_1')): ?>
     <?php while (have_rows('podcast_1')): the_row(); ?>
         <div class="bg-gray-light bio pb-5">
@@ -105,38 +70,34 @@ get_header(); ?>
     <?php endwhile; ?>
 <?php endif; ?>
 
-<?php if (have_rows('podcast_2')): ?>
-    <?php while (have_rows('podcast_2')): the_row(); ?>
-        <div class="bg-gray bio pb-5">
-            <div class="md:w-3/4 mx-auto grid grid-cols-12 gap-4 p-2">
 
-                <div class="col-span-12 md:col-span-4 text-center mx-auto my-2 md:my-5 px-3">
-                    <img class = "shadow-lg rounded-lg" src="<?php the_sub_field('podcast_logo'); ?>" alt="">
-                </div>
+<div class="bg-gray bio">
+    <div class="md:w-11/12 lg:w-3/4 mx-auto grid grid-cols-12 p-5">
 
-                <div class="col-span-12 my-2 md:col-span-8 mt-5 px-3">
-                    <h3 class="text-xl md:text-2xl mb-1 font-bold"><?php the_sub_field('podcast_title'); ?></h3>
-                    <p><?php the_sub_field('podcast_description'); ?></p>
-
-                    <?php if (get_sub_field('spotify_link')): ?>
-                        <a href="<?php the_sub_field('spotify_link'); ?>">
-                            <button class="uppercase inline-block rounded-md mt-3 py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
-                                <?php the_sub_field('spotify_button_text'); ?>
-                            </button>
-                        </a>
-                    <?php endif; ?>
-
-                    <?php if (get_sub_field('apple_music_link')): ?>
-                        <a href="<?php the_sub_field('apple_music_link'); ?>">
-                            <button class="uppercase inline-block rounded-md mt-3 py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
-                                <?php the_sub_field('apple_music_button_text'); ?>
-                            </button>
-                        </a>
-                    <?php endif; ?>
-                </div>
+        <div class="col-span-12 md:col-span-4 md:col-span-5 bg-gray-dark text-white px-5 relative rounded-t-xl md:rounded-t-none md:rounded-l-xl">
+            <div class="content-middle-medium mx-auto p-3 md:w-10/12">
+                <h3 class="text-2xl mb-1 font-bold"><?php the_field('sn_title'); ?></h3>
+                <p><?php the_field('sn_description'); ?></p>
             </div>
         </div>
-    <?php endwhile; ?>
-<?php endif; ?>
+
+        <div class="col-span-12 md:col-span-7 bg-gray-lightest rounded-b-xl md:rounded-b-none md:rounded-r-xl">
+            <div class="text-left p-10 text-black form">
+                <h2 class="text-xl md:text-3xl mb-5 font-bold"><?php the_field('cta_text'); ?></h2>
+                <!-- This will generate your form when you add it in WP Admin. -->
+                <?php if (have_posts()) : while (have_posts()) : the_post();
+                    the_content();
+                endwhile;
+                else: ?>
+                    <p>Sorry, no posts matched your criteria.</p>
+                <?php endif; ?>
+                <p class = "text-sm text-gray-dark">This site is protected by reCAPTCHA and the Google
+                    <a class = "underline" href="https://policies.google.com/privacy">Privacy Policy</a> and
+                    <a class = "underline" href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <?php get_footer();
