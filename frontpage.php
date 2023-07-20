@@ -69,13 +69,42 @@ get_header(); ?>
         </div>
     </div>
 
+    <!-- Asset Free Resource -->
+    <div class="bg-gray-middle bio py-20">
+        <div class="md:w-2/3 mx-auto grid grid-cols-12 p-5">
+
+            <div class="col-span-12 md:col-span-5 md:order-2 bg-gray-dark text-white px-5 relative rounded-t-xl md:rounded-t-none md:rounded-r-xl">
+                <div class="content-middle-medium mx-auto p-3 md:w-10/12">
+                    <img src="<?php the_field("resource_image");?>" alt="">
+                </div>
+            </div>
+
+            <div class="col-span-12 md:col-span-7 md:order-1 bg-gray-lightest rounded-b-xl md:rounded-br-none md:rounded-l-xl">
+                <div class="text-left p-10 md:py-20 text-black form">
+                    <h2 class="text-xl md:text-3xl mb-5 font-bold"><?php the_field('resource_title'); ?></h2>
+                    <!-- This will generate your form when you add it in WP Admin. -->
+                    <?php if (have_posts()) : while (have_posts()) : the_post();
+                        the_content();
+                    endwhile;
+                    else: ?>
+                        <p>Sorry, no posts matched your criteria.</p>
+                    <?php endif; ?>
+                    <p class = "text-sm text-gray-dark">This site is protected by reCAPTCHA and the Google
+                        <a class = "underline" href="https://policies.google.com/privacy">Privacy Policy</a> and
+                        <a class = "underline" href="https://policies.google.com/terms">Terms of Service</a> apply.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ENd Asset Free Resource -->
+
     <div class="bg-white">
-        <div class=" lg:text-center lg:mx-auto">
+        <div class="lg:text-center lg:mx-auto">
             <div class="grid grid-cols-12">
 
                 <?php if (have_rows('slot_1')): ?>
                     <?php while (have_rows('slot_1')): the_row(); ?>
-                        <div class="col-span-12 md:col-span-4 text-center bg-gray-middle py-14 px-4">
+                        <div class="col-span-12 md:col-span-4 text-center bg-gray py-14 px-4">
                             <h3 class="text-xl"><?php the_sub_field('title') ?></h3>
                             <p class = "lg:h-14"><?php the_sub_field('body_text') ?></p>
 
