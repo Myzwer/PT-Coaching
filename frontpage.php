@@ -73,7 +73,7 @@ get_header(); ?>
     <div class="bg-gray-middle bio py-20">
         <div class="md:w-2/3 mx-auto grid grid-cols-12 p-5">
 
-            <div class="col-span-12 md:col-span-5 md:order-2 bg-gray-dark text-white px-5 relative rounded-t-xl md:rounded-t-none md:rounded-r-xl">
+            <div class="col-span-12 md:col-span-5 md:order-2 bg-gray text-white px-5 relative rounded-t-xl md:rounded-t-none md:rounded-r-xl">
                 <div class="content-middle-medium mx-auto p-3 md:w-10/12">
                     <img src="<?php the_field("resource_image");?>" alt="">
                 </div>
