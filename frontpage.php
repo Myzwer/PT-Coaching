@@ -29,16 +29,6 @@ get_header(); ?>
                 <div class="col-span-12 text-center mx-auto">
                     <div class="px-2 mb-1">
                         <h2 class="text-2xl pb-3 md:pr-5 md:inline-block"><?php the_field('primary_cta_text') ?></h2>
-
-                        <?php if (have_rows('primary_cta_button')): ?>
-                            <?php while (have_rows('primary_cta_button')): the_row(); ?>
-                                <a href="<?php the_sub_field('button_link') ?>">
-                                    <button class="uppercase md:inline-block rounded-md py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
-                                        <?php the_sub_field('button_text') ?>
-                                    </button>
-                                </a>
-                            <?php endwhile; ?>
-                        <?php endif; ?>
                     </div>
                 </div>
             </div>
