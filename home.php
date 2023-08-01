@@ -100,7 +100,7 @@ if (is_home()) {
 <div class="bg-white">
     <!-- Start All Other Posts -->
     <div class="md:w-7/12 mx-auto">
-        <div class="grid grid-cols-12 gap-4 pt-10">
+        <div class="grid grid-cols-12 gap-4 pt-10 px-5">
 
             <!-- "All sermons" text -->
             <div class="col-span-12 text-center mx-auto">
