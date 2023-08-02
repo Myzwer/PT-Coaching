@@ -100,7 +100,7 @@ if (is_home()) {
 <div class="bg-white">
     <!-- Start All Other Posts -->
     <div class="md:w-7/12 mx-auto">
-        <div class="grid grid-cols-12 gap-4 pt-10 px-5">
+        <div class="grid grid-cols-12 gap-4 py-10 px-5">
 
             <!-- "All sermons" text -->
             <div class="col-span-12 text-center mx-auto">
@@ -142,7 +142,9 @@ if (is_home()) {
                 $loop->the_post();
                 ?>
 
-                <div class="col-span-12 p-5 mb-8 bg-gray-light shadow-lg rounded-lg">
+                <div class="col-span-12 md:col-span-6 lg:col-span-4  bg-gray-light shadow-lg rounded-lg">
+                    <img class = "rounded-t-xl" src="<?php echo the_post_thumbnail_url() ?>" alt="">
+                    <div class="p-5 mb-8">
                     <h3 class="text-xl md:text-2xl font-bold"><?php echo get_the_title(); ?></h3>
                     <p class="font-bold pb-3"><?php echo get_the_date(); ?> | <?php the_author(); ?></p>
                     <p><?php echo the_excerpt(); ?></p>
@@ -151,6 +153,7 @@ if (is_home()) {
                             Read More
                         </button>
                     </a>
+                    </div>
                 </div>
 
             <?php endwhile; ?>
