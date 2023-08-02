@@ -34,7 +34,7 @@ get_header(); ?>
             <!-- ******** THE FEATURED SERMON ******** -->
             <!-- "Latest sermon" text -->
             <div class="col-span-12 text-center mx-auto mt-10">
-                <h3 class="text2xl md:text-3xl mb-3 font-bold"><?php the_field('body_title_1'); ?></h3>
+                <h3 class="text-2xl md:text-3xl mb-3 font-bold"><?php the_field('body_title_1'); ?></h3>
             </div>
 
             <!-- Start the actual card -->
@@ -55,34 +55,34 @@ get_header(); ?>
                 );
 
                 foreach ($recent_posts as $post) : ?>
-                <div class="col-span-12 lg:col-span-6 text-center bg-gray-light lg:rounded-l-lg">
-                    <div class="bg-no-repeat bg-scroll bg-cover relative shadow-lg rounded-t-lg md:rounded-t-none md:rounded-l-lg"
-                         style="background: url('<?php echo get_the_post_thumbnail_url($post['ID'], 'post-thumbnail');?>') no-repeat center center scroll;
-                                 background-size: cover; height: 40vh;">
+                <div class="col-span-12 lg:col-span-6 text-center bg-gray-light rounded-t-lg md:rounded-r-none lg:rounded-l-lg">
+                    <img class = "rounded-t-lg md:rounded-r-none lg:rounded-l-lg" src="<?php echo get_the_post_thumbnail_url($post['ID'], 'post-thumbnail');?>" alt="">
+              </div>
+
+                <div class="col-span-12 lg:col-span-6 p-5 bg-gray-light shadow-lg rounded-b-lg md:rounded-b-none md:rounded-r-lg relative">
+                    <div class="content-middle-xlarge">
+                    <div class="md:m-5">
+                        <h3 class="text-xl md:text-2xl mb-1 font-bold">
+                            <?php echo $post['post_title'] ?>
+                        </h3>
+
+                        <p><?php echo wp_trim_words(get_the_content(null, false, $post['ID']), 20) ?></p>
+
+                        <a href="<?php echo get_permalink($post['ID']) ?>">
+                            <button class="uppercase inline-block rounded-md mt-3 py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
+                                Watch Now
+                            </button>
+                        </a>
+                    <?php endforeach;
+                    wp_reset_query(); ?>
                     </div>
-
-<!--                    -->                </div>
-                <div class="col-span-12 lg:col-span-6 p-5 bg-gray-light shadow-lg rounded-b-lg md:rounded-b-none md:rounded-r-lg">
-                    <h3 class="text-xl md:text-2xl mb-1 font-bold">
-                        <?php echo $post['post_title'] ?>
-                    </h3>
-
-                    <p><?php echo wp_trim_words(get_the_content(null, false, $post['ID']), 55) ?></p>
-
-                    <a href="<?php echo get_permalink($post['ID']) ?>">
-                        <button class="uppercase inline-block rounded-md mt-3 py-3 px-6 text-white bg-gray-dark hover:bg-gray-darkest transition duration-300">
-                            Watch Now
-                        </button>
-                    </a>
-                <?php endforeach;
-                wp_reset_query(); ?>
-
             </div>
+                </div>
             <!-- End Featured Sermon -->
 
             <!-- All Sermons -->
             <div class="col-span-12 text-center mx-auto mt-10">
-                <h3 class="text2xl md:text-3xl mb-3 font-bold"><?php the_field('body_title_2'); ?></h3>
+                <h3 class="text-2xl md:text-3xl mb-3 font-bold"><?php the_field('body_title_2'); ?></h3>
             </div>
 
 
@@ -115,7 +115,9 @@ get_header(); ?>
 
                     ?>
 
-                    <div class="col-span-12 p-5 mb-8 bg-gray-light shadow-lg rounded-lg">
+                    <div class="col-span-12 md:col-span-6 lg:col-span-4 mx-5 mb-8 bg-gray-light shadow-lg rounded-lg">
+                        <img class = "rounded-t-lg" src="<?php the_post_thumbnail_url() ?>" alt="Sermon Thumbnail">
+                        <div class="p-5">
                         <h3 class="text-xl md:text-2xl font-bold"><?php echo get_the_title(); ?></h3>
                         <p class="font-bold pb-3"><?php echo get_the_date(); ?></p>
                         <p><?php echo the_excerpt(); ?></p>
@@ -124,6 +126,7 @@ get_header(); ?>
                                 Watch Now
                             </button>
                         </a>
+                    </div>
                     </div>
                 <?php } ?>
 
